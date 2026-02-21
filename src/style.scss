@@ -1,0 +1,11 @@
+@import "tailwindcss";
+@import "./components/theme.scss";
+@import "./components/base.scss";
+@import "./components/components.scss";
+
+
+html {
+  /* Reserve space only on the scrollbar side (right) */
+  scrollbar-gutter: stable;
+}
+
