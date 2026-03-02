@@ -6,6 +6,22 @@
 
 html {
   /* Reserve space only on the scrollbar side (right) */
-  scrollbar-gutter: stable;
+  scrollbar-gutter: unset;
 }
 
+.mode-card-shadow{
+    box-shadow: 0px 0.99px 7.88px 0px #333F7640;
+};
+.mode-shadow{
+  box-shadow: 0px 1.94px 11.66px 0px #00000040;
+
+};
+.tier-1{
+  background: linear-gradient(0deg, #FED428, #FED428),radial-gradient(64.28% 85% at 50% 15%, rgba(253, 243, 0, 0.3) 1.56%, rgba(255, 248, 189, 0.3) 1.57%, rgba(254, 212, 40, 0.3) 52.6%, rgba(254, 143, 40, 0.3) 100%);
+
+};
+.tier-2{
+background: linear-gradient(0deg, #CCCFDD, #CCCFDD),
+radial-gradient(64.28% 85% at 50% 15%, rgba(129, 159, 255, 0.28) 1.57%, rgba(197, 170, 255, 0.28) 1.58%, rgba(204, 207, 221, 0.28) 48.96%, rgba(48, 34, 135, 0.28) 100%);
+
+}
