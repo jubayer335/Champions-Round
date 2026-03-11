@@ -2,7 +2,10 @@
 
   .hero-bg{
     @apply bg-[radial-gradient(83.04%_83.04%_at_50%_16.96%,_rgba(22,217,216,0.5)_0%,_rgba(84,0,192,0.5)_100%),linear-gradient(180deg,_#1BFF5B_-39.29%,_#24E5FF_35.44%,_#CC00FF_100%)];
-  }
+  };
+  .tab-active{
+    @apply border-third-bg bg-third-bg;
+  };
 
   }
 
