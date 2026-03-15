@@ -1,6 +1,19 @@
 import $, { speed } from 'jquery';
 jQuery(function($){
 
+    //nav
+    $(window).on('scroll', function(){
+        console.log($(window).scrollTop());
+
+        if($(window).scrollTop() > 29){
+            $('.header').addClass('bg-primary-bg');
+            $('.header').addClass('pb-3');
+        } else {
+            $('.header').removeClass('bg-primary-bg');
+            $('.header').removeClass('pb-3');
+        };
+    });
+
     let seenOn = $('.seen-on .seen-on-slider');
 
 if (seenOn.length > 0) {
