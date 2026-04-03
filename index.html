@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Champions Round</title>
-    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/vendors/WOW-master/css/libs/animate.css">
     <link rel="stylesheet" href="./assets/vendors/slick/slick/slick.css">
     <link rel="stylesheet" href="./assets/vendors/slick/slick/slick-theme.css">
@@ -12,10 +12,68 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Carter+One&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="">
+    <!--offcanvas-menu-->
+    <div class="offcanvas-menu flex flex-col gap-8.5 w-full h-full fixed z-100 overflow-y-auto pt-9 pl-8 -translate-x-full transition-all duration-1000 bg-primary-bg wow fadeInDown">
+        <div class="offcanvas-top w-full flex justify-between items-center pr-6.25">
+            <div class="logo">
+                <img src="./assets/img/logo/logo.webp" alt="" class="max-w-240px">
+            </div>
+            <div class="close">
+                <svg width="30" height="27" viewBox="0 0 30 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+<line x1="3.60213" y1="0.706956" x2="27.8119" y2="24.9168" stroke="white" stroke-width="2"/>
+<line x1="2.18791" y1="24.9169" x2="26.3977" y2="0.707115" stroke="white" stroke-width="2"/>
+</svg>
+
+            </div>
+        </div>
+        <div class="offcanvas-btm pr-4.5">
+            <ul class="menu-active">
+                <li class="w-full abc">
+                    <div class="flex w-full justify-between items-center">
+                        <a href="#" class="font-circular-std">
+                    Game Modes
+                    </a>
+                    <a href="#">
+                        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M2.65792 8.57959L14.9989 20.9206L27.3398 8.57959" stroke="#42FEDA" stroke-width="3" stroke-linecap="square" stroke-linejoin="round"/>
+</svg>
+                    </a>
+                    </div>
+                    
+                    <ul class="hidden">
+                        <li><a href="#" class="font-circular-std">
+                            Sunday Special
+                        </a></li>
+                        <li><a href="#" class="font-circular-std">
+                           Hot Streak
+                        </a></li>
+                        <li><a href="#" class="font-circular-std">
+                            Boost Ball
+                        </a></li>
+                        <li><a href="#" class="font-circular-std">
+                            Saily Dozen
+                        </a></li>
+                        <li><a href="#" class="font-circular-std">
+                           7 Stakes
+                        </a></li>
+                        <li><a href="#" class="font-circular-std">
+                            Big Board
+                        </a></li>
+                    </ul>
+                </li>
+                <li><a href="#" class="font-circular-std">
+                    News
+                </a></li>
+                <li><a href="#" class="font-circular-std">
+                    Contact
+                </a></li>
+            </ul>
+        </div>
+    </div>
     <!--header-->
-    <header class="header px-7.5 sm:px-5 xl:px-0 fixed w-full mx-auto top-0 z-90 transition-all duration-1000">
-        <div class="header-content max-w-container mx-auto flex justify-between items-center pt-5.5">
+    <header class="header flex flex-col items-center gap-2.5 px-7.5 sm:px-5 xl:px-0 fixed w-full mx-auto top-0 z-90 transition-all duration-1000 wow fadeInDown">
+        <div class="header-content max-w-container w-full mx-auto flex justify-between items-center pt-5.5">
             <div class="logo">
                 <img src="./assets/img/logo/logo.webp" alt="" class="max-w-240px sm:max-w-230px md:max-w-max">
             </div>
@@ -54,11 +112,67 @@
                     </a></li>
                 </ul>
             </nav>
+            <div class="toggle-menu sm:hidden block">
+                <div class="bar">
+                    <svg width="30" height="26" viewBox="0 0 30 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+<line y1="1.45117" x2="30" y2="1.45117" stroke="white" stroke-width="2"/>
+<line y1="13.0254" x2="30" y2="13.0254" stroke="white" stroke-width="2"/>
+<line y1="24.5996" x2="30" y2="24.5996" stroke="white" stroke-width="2"/>
+</svg>
+
+                </div>
+            </div>
+        </div>
+        <div class="get-button-contaoner block sm:hidden">
+            <div class="get-button hidden">
+             <div class="flex gap-1.5">
+                        <!--app-store-->
+                        <div>
+                            <a href="#">
+                                <div class="flex justify-center items-center gap-5.5 bg-second-bg px-3 py-2 rounded-sm">
+                                    <div>
+                                        <svg width="20" height="24" viewBox="0 0 20 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M13.6942 3.82458C14.5585 2.79102 14.9922 1.67436 14.9922 0.478405V0.478391C14.9922 0.319769 14.9848 0.159877 14.9673 0C14.3652 0.0314709 13.725 0.215275 13.0482 0.547635C12.3699 0.885028 11.8106 1.30798 11.3708 1.81664C10.49 2.82128 9.99394 4.04998 9.99394 5.1981C9.99394 5.35678 10.004 5.50778 10.0215 5.65126C11.3896 5.7633 12.6512 5.05329 13.6942 3.82458ZM18.2956 20.9475C18.7878 20.2405 19.2126 19.4714 19.5715 18.636C19.7195 18.2817 19.8587 17.9127 19.9905 17.5274C19.3826 17.2706 18.8361 16.9089 18.3469 16.441C17.2672 15.4328 16.7179 14.1631 16.7017 12.6372C16.6842 10.6783 17.5675 9.15125 19.3533 8.061C18.3557 6.63213 16.8556 5.83902 14.8588 5.67665C14.122 5.61362 13.2225 5.77363 12.1568 6.16007C11.0298 6.57678 10.365 6.78579 10.1689 6.78579C9.90648 6.78579 9.30806 6.60704 8.37607 6.25454C7.44144 5.90323 6.68934 5.72448 6.11582 5.72448C5.06765 5.74204 4.09435 6.0166 3.19356 6.55537C2.29277 7.09415 1.57305 7.82807 1.03205 8.75846C0.343674 9.91676 0 11.299 0 12.9016C0 14.3006 0.254899 15.7457 0.763378 17.2381C1.23816 18.6197 1.84421 19.8316 2.58136 20.8767C3.26842 21.8553 3.84194 22.5461 4.30047 22.9491C5.01887 23.6222 5.73859 23.9425 6.46066 23.9115C6.93545 23.8953 7.55643 23.7315 8.32728 23.417C9.09696 23.1041 9.81654 22.9491 10.4875 22.9491C11.1272 22.9491 11.8269 23.1041 12.5882 23.417C13.347 23.7315 13.9989 23.8864 14.5395 23.8864C15.2925 23.8687 15.9956 23.5573 16.6519 22.9491C17.0753 22.5786 17.6246 21.9114 18.2956 20.9475Z" fill="white"/>
+                                       </svg>
+                                    </div>
+                                    <div class="flex flex-col gap-1">
+                                        <div class="text-7 md:text-8 text-white font-rubik font-medium leading-[1] uppercase">
+                                            AVAILABLE ON THE
+                                        </div>
+                                        <div class="text-sm md:text-lg text-white font-normal font-rubik leading-[1]">
+                                            App Store
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!--play-store-->
+                        <div>
+                            <a href="#">
+                                <div class="flex justify-center items-center gap-4 bg-second-bg px-3 py-2 rounded-sm">
+                                    <div>
+                                       <svg width="23" height="25" viewBox="0 0 23 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M16.3817 8.20573L12.8356 11.7832L12.8342 11.7817L1.14011 0C1.42142 0.000412562 1.69764 0.0756868 1.9408 0.218206L16.3817 8.20573ZM9.29506e-06 22.9505V22.5856L0 22.5779V1.67725L9.29506e-06 1.66955V1.31212C9.29506e-06 0.746495 0.196619 0.31439 0.51433 0.127765L12.4093 12.1148L12.2692 12.2561V12.2634L11.7147 12.8154L0.504357 24.1234C0.19377 23.9166 0.0042703 23.5161 9.29506e-06 22.9505ZM12.8356 12.4479L1.1045 24.2813C1.39893 24.2862 1.68895 24.2087 1.94223 24.0573L16.4116 16.0483L12.8356 12.4479ZM16.8077 8.44117L21.6132 11.1042H21.6133C22.6276 11.6655 22.6276 12.5943 21.6118 13.1585L16.8347 15.8143L13.1647 12.1162L16.8077 8.44117Z" fill="white"/>
+                                       </svg>
+                                    </div>
+                                    <div class="flex flex-col gap-1">
+                                        <div class="text-7 md:text-8 text-white font-rubik font-medium leading-[1] uppercase">
+                                           GET IT ON
+                                        </div>
+                                        <div class="text-sm md:text-lg text-white font-normal font-rubik leading-[1]">
+                                           Google Play
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+             </div>
+            </div>
         </div>
     </header>
     <!--hero-section-->
     <div class="hero-section mx-auto w-full pt-25 sm:pt-27.5 hero-bg">
-        <div class="hero-content px-2 flex flex-col-reverse sm:flex-row items-center justify-center gap-7 sm:gap-0 max-w-container mx-auto">
+        <div class="hero-content px-2 flex flex-col-reverse sm:flex-row items-center justify-center gap-7 sm:gap-0 max-w-container mx-auto wow fadeInUp">
             <!--left-content-->
             <div class="hero-left-content relative flex justify-center w-335 md:w-346 lg:w-46/100 -mb-11.5 sm:-mb-3">
                 <img src="./assets/img/hero/iPhone.webp" alt="" class="max-w-64 lg:max-w-max hidden sm:block">
@@ -458,12 +572,12 @@
     </div>  
     <!--chanales-->
     <div class="seen-on w-full mx-auto flex justify-between items-center pt-5 pb-0 sm:pt-10 sm:pb-5 lg:pt-15 lg:pb-9.5 bg-primary-bg">
-        <div class="pl-3 sm:pl-10 lg:pl-24">
+        <div class="pl-3 sm:pl-10 lg:pl-24 wow fadeInUp" data-wow-delay="0.3s">
             <h4 class="text-9 sm:text-sm lg:text-h4 font-circular-std font-bold text-white leading-[1.1] mb-6.5">
                 As Seen On...
             </h4>
         </div>
-        <div class="w-75/100 seen-on-slider">
+        <div class="w-75/100 seen-on-slider wow fadeInUp" data-wow-delay="0.3s">
             <div>
                 <img src="./assets/img/channel/Vector-1.webp" alt="">
             </div>
@@ -488,7 +602,7 @@
     <div class="game-mode w-full mx-auto pt-11.25 pb-6.75 sm:pb-26 sm:pt-16">
         <div class="game-mode-content max-w-container mx-auto flex flex-col items-center gap-8.5">
             <!--title-->
-            <div class="flex flex-col gap-1">
+            <div class="flex flex-col gap-1 wow fadeInUp">
                 <div>
                     <h2 class="text-h2 text-title font-regular font-carter leading-[1.12] text-center">
                     Game Modes
@@ -504,9 +618,9 @@
                 </div>
             </div>
             <!--content-->
-            <div class="max-w-container flex flex-wrap justify-center items-center gap-5">
+            <div class="max-w-container flex flex-wrap justify-center items-center gap-5 wow fadeInUp" data-wow-delay="0.3s">
                 <!--mode-1-->
-                <div class="hidden sm:block">
+                <div class="hidden sm:block  wow fadeInUp" data-wow-delay="0.3s">
                     <div class="max-w-400px relative px-8 pt-6 flex flex-col gap-3 rounded-lg overflow-hidden bg-primary-bg transition-all duration-10000 hover:bg-gradient-to-r hover:from-FF6200 hover:to-A00000">
 
                     <div class="absolute z-10 left-1/10 top-62/100 py-2.5 px-3 rounded-2xl bg-gradient-to-br from-FF6200 to-A00000">
@@ -680,7 +794,7 @@
                 </div>
                 </div>
                 <!--mode-1-mobile-->
-                <div class="block sm:hidden">
+                <div class="block sm:hidden  wow fadeInUp" data-wow-delay="0.3s">
                     <div class="max-w-313px px-6 pt-5 gap-15 flex flex-col rounded-lg overflow-hidden bg-primary-bg hover:bg-gradient-to-r hover:from-FF6200 hover:to-A00000 duration-1000">
                     <!--mode-top-->
                     <div class="flex flex-col gap-2 pr-4.25">
@@ -917,7 +1031,7 @@
                     </div>
                 </div>
                 <!--mode-2-->
-                <div class="hidden sm:block">
+                <div class="hidden sm:block  wow fadeInUp">
                     <div class="max-w-400px px-6 pt-5 gap-3 flex flex-col rounded-lg overflow-hidden bg-primary-bg hover:bg-gradient-to-r hover:from-FF6200 hover:to-A00000 duration-1000">
                     <!--mode-top-->
                     <div class="flex flex-col gap-2 pr-11">
@@ -1213,7 +1327,7 @@
                     </div>
                 </div>
                 <!--mode-2-mobile-->
-                <div class="block sm:hidden">
+                <div class="block sm:hidden wow fadeInUp">
                     <div class="max-w-313px relative px-6 pt-5 gap-12 flex flex-col rounded-lg overflow-hidden bg-primary-bg hover:bg-gradient-to-r hover:from-FF6200 hover:to-A00000 duration-1000">
 
                     <div class="card-r-t absolute top-41/100 z-10 max-w-208px rounded-xl p-3.5 bg-191F3A">
@@ -1568,7 +1682,7 @@
                     </div>
                 </div>
                 <!--mode-3-->
-                <div class="hidden sm:block">
+                <div class="hidden sm:block  wow fadeInUp">
                     <div class="max-w-400px px-8 pt-6 gap-1.5 flex flex-col rounded-lg overflow-hidden bg-primary-bg hover:bg-gradient-to-r hover:from-FF6200 hover:to-A00000 duration-1000">
                     <!--mode-top-->
                     <div class="flex flex-col gap-2 pr-7">
@@ -1707,7 +1821,7 @@
                     </div>
                 </div>
                 <!--mode-3-mobile-->
-                <div class="block sm:hidden">
+                <div class="block sm:hidden  wow fadeInUp">
                     <div class="max-w-313px relative px-6 pt-5 gap-12 flex flex-col rounded-lg overflow-hidden bg-primary-bg hover:bg-gradient-to-r hover:from-FF6200 hover:to-A00000 duration-1000hover:bg-gradient-to-r hover:from-FF6200 hover:to-A00000 duration-1000">
 
                     <div class="card-r-t absolute top-41/100 z-10 max-w-208px rounded-xl p-3.5 bg-191F3A">
@@ -2061,9 +2175,8 @@
                     </div>
                     </div>
                 </div>
-
                 <!--mode-4-->
-                <div class="hidden sm:block ">
+                <div class="hidden sm:block  wow fadeInUp">
                     <div class="max-w-400px relative px-8 pt-6 gap-3 flex flex-col rounded-lg overflow-hidden bg-primary-bg hover:bg-gradient-to-r hover:from-FF6200 hover:to-A00000 duration-1000">
 
                     <div class="card-r-t absolute top-46/100 z-10 max-w-208px rounded-xl p-3.5 bg-191F3A">
@@ -2418,7 +2531,7 @@
                     </div>
                 </div>
                 <!--mode-5-->
-                <div class="relative max-w-313px sm:max-w-400px relative px-6 sm:px-8 pt-5 sm:pt-6 gap-13.25 flex flex-col rounded-lg overflow-hidden bg-primary-bg hover:bg-gradient-to-r hover:from-FF6200 hover:to-A00000 duration-1000">
+                <div class="relative max-w-313px sm:max-w-400px relative px-6 sm:px-8 pt-5 sm:pt-6 gap-13.25 flex flex-col rounded-lg overflow-hidden bg-primary-bg hover:bg-gradient-to-r hover:from-FF6200 hover:to-A00000 transition-all duration-1000  wow fadeInUp">
 
                     <div class="absolute top-48/100 left-45/100">
                         <div class="max-w-146px sm:max-w-183px flex flex-col border border-second-bg rounded-lg leaderboard-shadow">
@@ -2568,7 +2681,7 @@
                     </div>
                 </div>
                 <!--mode-6-->
-                <div class="relative max-w-313px sm:max-w-400px relative px-6 sm:px-8 pt-5 sm:pt-6 gap-12 flex flex-col rounded-lg overflow-hidden bg-primary-bg hover:bg-gradient-to-r hover:from-FF6200 hover:to-A00000 duration-1000">
+                <div class="relative max-w-313px sm:max-w-400px relative px-6 sm:px-8 pt-5 sm:pt-6 gap-12 flex flex-col rounded-lg overflow-hidden bg-primary-bg hover:bg-gradient-to-r hover:from-FF6200 hover:to-A00000 duration-1000  wow fadeInUp">
 
                     <div class="absolute top-43/100 left-47/100 flex flex-col gap-1.5">
                         <div class="flex items-center gap-1.5">
@@ -2973,7 +3086,7 @@
     </div>
     <!--app-section-->
     <div class="app-section w-full mx-auto pt-17.25 pb-14.5 sm:pt-14.5 sm:pb-14.5">
-        <div class="app-content max-w-861px mx-auto">
+        <div class="app-content max-w-861px mx-auto wow fadeInUp">
             <!--desktop-->
             <div class="hidden sm:block mx-auto">
                 <div class="flex justify-center gap-16.25 sm:gap-20 lg:gap-35.5">
@@ -2984,8 +3097,8 @@
                             Champions Round app
                         </h2>
                     </div>
-                    <div class="flex flex-col gap-4 tab-container">
-                        <div class="pt-4 lg:pt-6 pb-4.75 lg:pb-6.75 px-4.75 lg:px-5.75 flex flex-col gap-2.75 lg:gap-3.75 hover:bg-third-bg-26 border border-transparent rounded-lg hover:border-third-bg tab-container">
+                    <div class="tab-container flex flex-col gap-4">
+                        <div class="tab-active tab-items pt-4 lg:pt-6 pb-4.75 lg:pb-6.75 px-4.75 lg:px-5.75 flex flex-col gap-2.75 lg:gap-3.75 hover:bg-third-bg-26 border border-transparent rounded-lg hover:border-third-bg" data-img="./assets/img/app-section/iPhone.webp">
                             <h4 class="text-lg lg:text-h4 font-bold font-circular-std leading-[1.14]">
                                 Quick Games - Big Rewards
                             </h4>
@@ -2993,7 +3106,7 @@
                                  There’s always something for you and your friends to do. It’s simple, finally.
                             </div>
                         </div>
-                        <div class="pt-4 lg:pt-6 pb-4.75 lg:pb-6.75 px-4.75 lg:px-5.75 flex flex-col gap-2.75 lg:gap-3.75 hover:bg-third-bg-26 border border-transparent rounded-lg hover:border-third-bg tab-container">
+                        <div class="tab-items pt-4 lg:pt-6 pb-4.75 lg:pb-6.75 px-4.75 lg:px-5.75 flex flex-col gap-2.75 lg:gap-3.75 hover:bg-third-bg-26 border border-transparent rounded-lg hover:border-third-bg" data-img="./assets/img/app-section/iPhone1.webp">
                             <h4 class="text-lg lg:text-h4 font-bold font-circular-std leading-[1.14]">
                                 For Free or For Cash
                             </h4>
@@ -3001,7 +3114,7 @@
                                  All of our game modes can be played for free or for cash. Wanna try your luck?
                             </div>
                         </div>
-                        <div class="pt-4 lg:pt-6 pb-4.75 lg:pb-6.75 px-4.75 lg:px-5.75 flex flex-col gap-2.75 lg:gap-3.75 hover:bg-third-bg-26 border border-transparent rounded-lg hover:border-third-bg tab-container">
+                        <div class="tab-items pt-4 lg:pt-6 pb-4.75 lg:pb-6.75 px-4.75 lg:px-5.75 flex flex-col gap-2.75 lg:gap-3.75 hover:bg-third-bg-26 border border-transparent rounded-lg hover:border-third-bg" data-img="./assets/img/app-section/iPhone2.webp">
                             <h4 class="text-lg lg:text-h4 font-bold font-circular-std leading-[1.14]">
                                 Get That Drip
                             </h4>
@@ -3013,7 +3126,7 @@
                 </div>
                 <!--right-->
                 <div class="max-w-260px lg:max-w-max flex items-center app-shadow overflow-hidden rounded-37 lg:rounded-55">
-                    <img src="./assets/img/app-section/iPhone.webp" alt="">
+                    <img src="./assets/img/app-section/iPhone.webp" alt="" id="app-img">
                 </div>
                 </div>
             </div>
@@ -3021,12 +3134,12 @@
             <div class="block sm:hidden mx-auto">
                 <div class="flex flex-col items-center gap-23.25 text-center">
                     <div>
-                        <h2 class="text-title font-normal font-carter leading-[1.12]">
+                        <h2 class="text-title font-normal font-carter leading-[1.12]  wow fadeInUp">
                             Champions Round app
                         </h2>
                     </div>
                     <div class="flex flex-col flex-center items-center gap-11">
-                        <div class="max-w-315px flex flex-col gap-5 border border-DFE1EA rounded-lg">
+                        <div class="max-w-315px flex flex-col gap-5 border border-DFE1EA rounded-lg  wow fadeInUp" data-wow-delay="0.3s">
                             <div class="px-2.5">
                                 <div class="px-7.5 border-b border-DFE1EA">
                                     <img src="./assets/img/app-section/Rectangle798.webp" alt="" class="app-shadow rounded-t-xl -mt-6">
@@ -3043,7 +3156,7 @@
                                 </div>
                             </div>
                         </div>
-                         <div class="max-w-315px flex flex-col gap-5 border border-DFE1EA rounded-lg">
+                         <div class="max-w-315px flex flex-col gap-5 border border-DFE1EA rounded-lg wow fadeInUp">
                             <div class="px-2.5">
                                 <div class="px-7.5 border-b border-DFE1EA">
                                     <img src="./assets/img/app-section/Rectangle798.webp" alt="" class="app-shadow rounded-t-xl -mt-6">
@@ -3060,7 +3173,7 @@
                                 </div>
                             </div>
                         </div>
-                         <div class="max-w-315px flex flex-col gap-5 border border-DFE1EA rounded-lg">
+                         <div class="max-w-315px flex flex-col gap-5 border border-DFE1EA rounded-lg  wow fadeInUp">
                             <div class="px-2.5">
                                 <div class="px-7.5 border-b border-DFE1EA">
                                     <img src="./assets/img/app-section/Rectangle798.webp" alt="" class="app-shadow rounded-t-xl -mt-6">
@@ -3086,7 +3199,7 @@
     <div class="news-section w-full mx-auto pt-12.25 sm:pt-15 pb-9.5 sm:pb-12 bg-primary-bg">
         <div class="news-content mx-auto flex flex-col items-center gap-8">
             <!--title-->
-            <div class="flex flex-col items-center gap-2 text-center">
+            <div class="flex flex-col items-center gap-2 text-center wow fadeInUp">
                 <h2 class="text-white font-normal font-carter leading-[1.12]">
                     <span class="hidden sm:block">
                         Breaking News
@@ -3107,7 +3220,7 @@
             <!--main-->
             <div class="flex flex-wrap gap-5 justify-center items-center px-2.5">
                 <!--card-1--->
-                <div class="max-w-400px flex flex-col gap-7.25 pb-6.25 rounded-lg bg-second-bg">
+                <div class="max-w-400px flex flex-col gap-7.25 pb-6.25 rounded-lg bg-second-bg  wow fadeInUp" data-wow-delay="0.3s">
                     <div class="rounded-t-lg">
                         <img src="./assets/img/news-section/Rectangle800.webp" alt="">
                     </div>
@@ -3125,7 +3238,7 @@
                     </div>
                 </div>
                 <!--card-2--->
-                <div class="max-w-400px flex flex-col gap-7.25 pb-6.25 rounded-lg bg-second-bg">
+                <div class="max-w-400px flex flex-col gap-7.25 pb-6.25 rounded-lg bg-second-bg  wow fadeInUp">
                     <div class="rounded-t-lg">
                         <img src="./assets/img/news-section/Rectangle800-1.webp" alt="">
                     </div>
@@ -3143,7 +3256,7 @@
                     </div>
                 </div>
                 <!--card-3--->
-                <div class="max-w-400px flex flex-col gap-7.25 pb-6.25 rounded-lg bg-second-bg"> 
+                <div class="max-w-400px flex flex-col gap-7.25 pb-6.25 rounded-lg bg-second-bg  wow fadeInUp"> 
                     <div class="rounded-t-lg">
                         <img src="./assets/img/news-section/Rectangle800-2.webp" alt="">
                     </div>
@@ -3162,7 +3275,7 @@
                 </div>
             </div>
             <!--button-->
-            <div class="mt-5 sm:mt-4.5 mb-4 sm:mb-3">
+            <div class="mt-5 sm:mt-4.5 mb-4 sm:mb-3 wow fadeInUp" data-wow-delay="0.3s">
                 <a href="#" class="px-24.25 sm:px-29.25 py-5 sm:py-4.5 rounded-4xl text-base text-primary-bg font-medium font-circular-std leading-[1] bg-third-bg">
                     See More News
                 </a>
@@ -3171,7 +3284,7 @@
     </div>
     <!--offer-section-->
     <div class="offer-section w-full mx-auto pt-9.5 md:pt-0 bg-gradient-to-r from-6989ED to-third-bg">
-        <div class="offer-content max-w-container mx-auto flex flex-col md:flex-row items-center justify-center gap-5 md:gap-7 lg:gap-12.5 xl:gap-24 2xl:pr-21">
+        <div class="offer-content max-w-container mx-auto flex flex-col md:flex-row items-center justify-center gap-5 md:gap-7 lg:gap-12.5 xl:gap-24 2xl:pr-21 wow fadeInUp">
             <!--left-->
             <div class="max-w-315px sm:max-w-max flex flex-col items-center md:items-start gap-6.25 md:gap-4.5 lg:gap-7">
                     <div class="hidden md:block text-55 md:text-h2 lg:text-55 text-white font-normal font-carter leading-55px">
@@ -3232,7 +3345,7 @@
     </div>
     <!--sign-up-->
     <div class="signup-section w-full mx-auto pt-9.5 pb-7.5 sm:pt-7 sm:pb-7 bg-second-bg">
-        <div class="signup-content max-w-343px sm:max-w-container mx-auto flex flex-col md:flex-row items-center justify-center gap-8 md:gap-11 lg:gap-26 px-1 sm:px-2.5 sm:px-4 xl:px-0">
+        <div class="signup-content max-w-343px sm:max-w-container mx-auto flex flex-col md:flex-row items-center justify-center gap-8 md:gap-11 lg:gap-26 px-1 sm:px-2.5 sm:px-4 xl:px-0 wow fadeInUp">
             <!--left-->
             <div class="flex flex-col gap-5 sm:gap-1">
                 <div class="flex flex-col items-center md:items-start gap-2 sm:gap-2.5">
@@ -3349,7 +3462,7 @@
     </div>
     <!--footer-->
     <footer class="footer w-full mx-auto pt-6.5 md:pt-10 px-7.5 md:px-24.5 bg-primary-bg">
-        <div class="footer-content max-w-container mx-auto flex flex-col justify-between">
+        <div class="footer-content max-w-container mx-auto flex flex-col justify-between wow fadeInDown">
             <!--top-cotent-->
             <div class="w-full mx-auto flex flex-wrap justify-between gap-4.5 pb-6.5 md:pb-13.75 sm:gap-10 xl:gap-0">
                 <div class="sm:w-full lg:max-w-max flex flex-col sm:flex-row lg:flex-col sm:items-center lg:items-start sm:justify-center lg:justify-start gap-5 sm:gap-12.5 lg:gap-5">
@@ -3487,7 +3600,7 @@
 
    
     <script src="./assets/vendors/jquery/jquery-3.7.1.min.js"></script>
-    <script src="/assets/vendors/WOW-master/dist/wow.min.js"></script>
+<script src="./assets/vendors/WOW-master/dist/wow.min.js"></script>
     <script type="text/javascript" src="./assets/vendors/slick/slick/slick.min.js"></script>
    <script src="/assets/js/bundle.js"></script>
 
