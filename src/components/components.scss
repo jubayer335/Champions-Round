@@ -9,9 +9,9 @@
           @apply text-4xl text-white font-bold leading-[1.25];
         }
         ul{
-          @apply mt-4;
+          
           li{
-            @apply pb-4 border-b border-b-41494C last:border-b-0;
+            @apply py-4 border-b border-b-41494C last:border-b-0;
             a{
               @apply text-lg text-white font-normal leading-6 pl-2;
             }

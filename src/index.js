@@ -7,16 +7,19 @@ jQuery(function($){
 
         if($(window).scrollTop() >= 29){
             $('.header').addClass('bg-primary-bg pb-3');
-            $('.get-button').fadeIn(1000);
+            $('.get-button').show();
+            $('.offcanvas-menu').removeClass('fadeInDown')
+            $('.header').removeClass('fadeInDown')
         } else {
             $('.header').removeClass('bg-primary-bg pb-3');
             $('.get-button').removeClass('absolute');
-            $('.get-button').fadeOut(1000);
-           
+            $('.get-button').hide();
+            $('.offcanvas-menu').addClass('fadeInDown')
+            $('.header').addClass('fadeInDown')
         };
     });
     //scroll-triger
-    $(window).trigger('scroll');
+   $(window).trigger('scroll');
     //mobile-nav
     $('.toggle-menu .bar').on('click', function(){
        $('.offcanvas-menu').toggleClass('-translate-x-full');
