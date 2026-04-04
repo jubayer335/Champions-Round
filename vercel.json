@@ -1,0 +1,4 @@
+{
+  "buildCommand": "yarn build:css && yarn build",
+  "outputDirectory": "."
+}
