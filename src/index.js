@@ -152,7 +152,7 @@ if (seenOn.length > 0) {
                 settings: {
                     dots: false,
                     infinite: true,
-                    speed: 2000, // Fast but smooth
+                    speed: 1000, // Fast but smooth
                     slidesToShow: 1,
                     slidesToScroll: 1,
                     arrows: false,
