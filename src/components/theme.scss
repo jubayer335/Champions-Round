@@ -3,6 +3,7 @@
     --color-second-bg: #333F76;
     --color-third-bg: #42FEDA;
     --color-third-bg-26: #42FEDA26;
+    --color-primary-bg-50: #00002C80;
     --color-32BFA480: #32BFA480;
     --color-380D7700: #380D7700;
     --color-310E7CF2: #310E7CF2;
@@ -45,18 +46,28 @@
     --color-title: #651FFF;
     --color-DFE1EA: #DFE1EA;
     --color-41494C: #41494C;
-    --text-h1: 4.6875rem;
-    --text-h2: 2.625rem;
-    --text-h3: 1.75rem;
-    --text-h4: 1.375rem;
-    --text-h5: 1.125rem;
+    --color-DAE2FB: #DAE2FB;
+    --color-D9D9D9: #D9D9D9;
+    --color-864BEC: #864BEC;
+    --color-EC32B8: #EC32B8;
+    --color-5B1CE6: #5B1CE6;
+    --color-44E7DB: #44E7DB;
+    --text-h1: 75px;
+    --text-h2: 42px;
+    --text-h3: 28px;
+    --text-h4: 22px;
+    --text-h5: 18px;
     --text-body: 16px;
+    --text-44: 44px;
 
     --text-num: 3rem;
     --text-55: 3.4375rem;
+    --text-49: 3.0625rem;
+    --text-39: 2.4375rem;
     --text-31: 1.9375rem;
     --text-46: 2.875rem;
     --text-44: 2.75rem;
+    --text-28: 28px;
     --text-11: 0.6875rem;
     --text-10: 0.625rem;
     --text-9: 0.5625rem;
@@ -81,13 +92,23 @@
    
     /*conrainer**/
     --spacing-container: 77.5rem;
-    --spacing-861px: 861px;
+    --spacing-768px: 48rem;
+    --spacing-1024px: 64rem;
+    --spacing-1095px: 68.4375rem;
+    --spacing-1197px: 74.8125rem;
+    --spacing-1116px: 69.75rem;
+    --spacing-1160px: 72.5rem;
+    --spacing-1370px: 85.625rem;
+    --spacing-861px: 53.8125rem;
+    --spacing-970px: 60.625rem;
 
     --spacing-117: 7.3281rem;
     --spacing-144: 9.0575rem;
+    --spacing-150px: 9.375rem;
     --spacing-151px: 9.4375rem;
     --spacing-230px: 14.375rem;
     --spacing-237px: 14.8125rem;
+    --spacing-270px: 16.875rem;
     --spacing-272: 17rem;
     --spacing-260px: 16.25rem;
     --spacing-335: 20.9375rem;
@@ -101,7 +122,9 @@
     --spacing-15px: 0.9375rem;
     --spacing-23px: 1.4375rem;
     --spacing-55px: 3.4375rem;
+    --spacing-30px: 1.875rem;
     --spacing-90px: 5.625rem;
+    --spacing-100px: 6.25rem;
     --spacing-103px: 6.4375rem;
     --spacing-106px: 6.625rem;
     --spacing-167px: 167px;
@@ -109,28 +132,50 @@
     --spacing-86px: 86px;
     --spacing-88px: 88px;
     --spacing-70px: 70px;
+    --spacing-316px: 19.75rem;
     --spacing-146px: 9.125rem;
     --spacing-160px: 10rem;
     --spacing-174px: 10.875rem;
+    --spacing-180px: 11.25rem;
     --spacing-183px: 11.4375rem;
     --spacing-185px: 11.5625rem;
     --spacing-189px: 11.8125rem;
     --spacing-196px: 12.25rem;
     --spacing-177px: 11.0625rem;
+    --spacing-200px: 12.5rem;
     --spacing-205px: 205px;
     --spacing-208px: 208px;
+    --spacing-209px: 209px;
+    --spacing-210px: 210px;
+    --spacing-228px: 228px;
     --spacing-227px: 14.1875rem;
+    --spacing-226px: 14.125rem;
     --spacing-240px: 15rem;
+    --spacing-348px: 21.75rem;
+    --spacing-250px: 15.625rem;
+    --spacing-267px: 16.6875rem;
     --spacing-282px: 17.625rem;
+    --spacing-302px: 18.875rem;
     --spacing-313px: 19.5625rem;
     --spacing-315px: 19.6875rem;
+    --spacing-334px: 334px;
+    --spacing-320px: 20rem;
+    --spacing-325px: 325px;
     --spacing-343px: 21.4375rem;
+    --spacing-367px: 367px;
+    --spacing-370px: 23.125rem;
     --spacing-382px: 23.875rem;
     --spacing-400px: 25rem;
     --spacing-447px: 28.5625rem;
     --spacing-480px: 30rem;
+    --spacing-500px: 500px;
+    --spacing-650px: 650px;
+    --spacing-815px: 815px;
     --spacing-border: 0.125rem;
     
-   
+   /*padding*/
+   --spacing-149px:149px;
+   --spacing-13px:13px;
+   --spacing-6px:6px;
    
 }
