@@ -1,0 +1,848 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Champions Round</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/vendors/WOW-master/css/libs/animate.css" />
+    <link rel="stylesheet" href="./assets/vendors/slick/slick/slick.css" />
+    <link rel="stylesheet" href="./assets/vendors/slick/slick/slick-theme.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Carter+One&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet" />
+</head>
+
+<body class="">
+    <!--offcanvas-menu-->
+    <div class="offcanvas-menu flex flex-col gap-8.5 w-full h-full fixed z-100 overflow-y-auto pt-9 pl-8 -translate-x-full transition-all duration-1000 bg-primary-bg wow fadeInDown">
+        <div class="offcanvas-top w-full flex justify-between items-center pr-6.25">
+            <div class="logo">
+                <img src="./assets/img/logo/logo.webp" alt="" class="max-w-240px" />
+            </div>
+            <div class="close">
+                <svg width="30" height="27" viewBox="0 0 30 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <line x1="3.60213" y1="0.706956" x2="27.8119" y2="24.9168" stroke="white" stroke-width="2" />
+                    <line x1="2.18791" y1="24.9169" x2="26.3977" y2="0.707115" stroke="white" stroke-width="2" />
+                </svg>
+            </div>
+        </div>
+        <div class="offcanvas-btm pr-4.5">
+            <ul class="menu-active">
+                <li class="w-full abc">
+                    <div class="flex w-full justify-between items-center">
+                        <a href="#" class="font-circular-std"> Game Modes </a>
+                        <a href="#" class="arrow transition-all duration-800">
+                            <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2.65792 8.57959L14.9989 20.9206L27.3398 8.57959" stroke="#42FEDA" stroke-width="3" stroke-linecap="square" stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                    </div>
+
+                    <ul class="hidden">
+                        <li>
+                            <a href="#" class="font-circular-std"> Sunday Special </a>
+                        </li>
+                        <li><a href="#" class="font-circular-std"> Hot Streak </a></li>
+                        <li><a href="#" class="font-circular-std"> Boost Ball </a></li>
+                        <li><a href="#" class="font-circular-std"> Saily Dozen </a></li>
+                        <li><a href="#" class="font-circular-std"> 7 Stakes </a></li>
+                        <li><a href="#" class="font-circular-std"> Big Board </a></li>
+                    </ul>
+                </li>
+                <li><a href="#" class="font-circular-std"> News </a></li>
+                <li><a href="#" class="font-circular-std"> Contact </a></li>
+            </ul>
+        </div>
+    </div>
+    <!--header-->
+    <header class="header flex flex-col items-center gap-2.5 px-7.5 sm:px-5 xl:px-0 fixed w-full mx-auto top-0 z-90 transition-all duration-1000 wow fadeInDown">
+        <div class="header-content max-w-container w-full mx-auto flex justify-between items-center pt-5.5">
+            <div class="logo">
+                <img src="./assets/img/logo/logo.webp" alt="" class="max-w-240px sm:max-w-230px md:max-w-max" />
+            </div>
+            <nav class="nav hidden sm:block">
+                <ul class="flex gap-7.5">
+                    <li class="py-3">
+                        <a href="#" class="flex items-center gap-1 text-xs md:text-lg font-bold font-circular-std text-white">
+                            <div>Game Modes</div>
+                            <div>
+                                <div class="hidden md:block">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M19 10.1714C19 10.4634 18.873 10.7534 18.627 10.9514L12.627 15.7794C12.256 16.0774 11.726 16.0734 11.36 15.7684L5.35998 10.7684C4.93598 10.4154 4.87898 9.7844 5.23198 9.3594C5.58498 8.9354 6.21598 8.8784 6.63998 9.2324L12.011 13.7074L17.373 9.3924C17.803 9.0464 18.433 9.1144 18.779 9.5454C18.928 9.7294 19 9.9514 19 10.1714Z" fill="white" />
+                                        <mask id="mask0_5033_2180" style="mask-type: luminance" maskUnits="userSpaceOnUse" x="5" y="9" width="14" height="7">
+                                            <path d="M19 10.1714C19 10.4634 18.873 10.7534 18.627 10.9514L12.627 15.7794C12.256 16.0774 11.726 16.0734 11.36 15.7684L5.35998 10.7684C4.93598 10.4154 4.87898 9.7844 5.23198 9.3594C5.58498 8.9354 6.21598 8.8784 6.63998 9.2324L12.011 13.7074L17.373 9.3924C17.803 9.0464 18.433 9.1144 18.779 9.5454C18.928 9.7294 19 9.9514 19 10.1714Z" fill="white" />
+                                        </mask>
+                                        <g mask="url(#mask0_5033_2180)"></g>
+                                    </svg>
+                                </div>
+                                <div class="block md:hidden">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M19 10.1714C19 10.4634 18.873 10.7534 18.627 10.9514L12.627 15.7794C12.256 16.0774 11.726 16.0734 11.36 15.7684L5.35998 10.7684C4.93598 10.4154 4.87898 9.7844 5.23198 9.3594C5.58498 8.9354 6.21598 8.8784 6.63998 9.2324L12.011 13.7074L17.373 9.3924C17.803 9.0464 18.433 9.1144 18.779 9.5454C18.928 9.7294 19 9.9514 19 10.1714Z" fill="white" />
+                                        <mask id="mask0_5033_2180" style="mask-type: luminance" maskUnits="userSpaceOnUse" x="5" y="9" width="14" height="7">
+                                            <path d="M19 10.1714C19 10.4634 18.873 10.7534 18.627 10.9514L12.627 15.7794C12.256 16.0774 11.726 16.0734 11.36 15.7684L5.35998 10.7684C4.93598 10.4154 4.87898 9.7844 5.23198 9.3594C5.58498 8.9354 6.21598 8.8784 6.63998 9.2324L12.011 13.7074L17.373 9.3924C17.803 9.0464 18.433 9.1144 18.779 9.5454C18.928 9.7294 19 9.9514 19 10.1714Z" fill="white" />
+                                        </mask>
+                                        <g mask="url(#mask0_5033_2180)"></g>
+                                    </svg>
+                                </div>
+                            </div>
+                        </a>
+                        <ul class="drop-down hidden">
+                            <li>
+                                <a href="#" class="flex text-xs md:text-base font-normal font-circular-std">
+                                    Sunday Special
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="flex text-xs md:text-base font-normal font-circular-std">
+                                    Hot Streak
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="flex text-xs md:text-base font-normal font-circular-std">
+                                    Boost Ball
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="flex text-xs md:text-base font-normal font-circular-std">
+                                    Saily Dozen
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="flex text-xs md:text-base font-normal font-circular-std">
+                                    7 Stakes
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="flex text-xs md:text-base font-normal font-circular-std">
+                                    Big Board
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="py-3">
+                        <a href="#" class="flex text-xs md:text-lg font-bold font-circular-std text-white">
+                            News
+                        </a>
+                    </li>
+                    <li class="py-3">
+                        <a href="#" class="flex text-xs md:text-lg font-bold font-circular-std text-white">
+                            Contact
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="toggle-menu sm:hidden block">
+                <div class="bar">
+                    <svg width="30" height="26" viewBox="0 0 30 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <line y1="1.45117" x2="30" y2="1.45117" stroke="white" stroke-width="2" />
+                        <line y1="13.0254" x2="30" y2="13.0254" stroke="white" stroke-width="2" />
+                        <line y1="24.5996" x2="30" y2="24.5996" stroke="white" stroke-width="2" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <div class="get-button-contaoner block sm:hidden">
+            <div class="get-button hidden">
+                <div class="flex gap-1.5">
+                    <!--app-store-->
+                    <div>
+                        <a href="#">
+                            <div class="flex justify-center items-center gap-5.5 bg-second-bg px-3 py-2 rounded-sm">
+                                <div>
+                                    <svg width="20" height="24" viewBox="0 0 20 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M13.6942 3.82458C14.5585 2.79102 14.9922 1.67436 14.9922 0.478405V0.478391C14.9922 0.319769 14.9848 0.159877 14.9673 0C14.3652 0.0314709 13.725 0.215275 13.0482 0.547635C12.3699 0.885028 11.8106 1.30798 11.3708 1.81664C10.49 2.82128 9.99394 4.04998 9.99394 5.1981C9.99394 5.35678 10.004 5.50778 10.0215 5.65126C11.3896 5.7633 12.6512 5.05329 13.6942 3.82458ZM18.2956 20.9475C18.7878 20.2405 19.2126 19.4714 19.5715 18.636C19.7195 18.2817 19.8587 17.9127 19.9905 17.5274C19.3826 17.2706 18.8361 16.9089 18.3469 16.441C17.2672 15.4328 16.7179 14.1631 16.7017 12.6372C16.6842 10.6783 17.5675 9.15125 19.3533 8.061C18.3557 6.63213 16.8556 5.83902 14.8588 5.67665C14.122 5.61362 13.2225 5.77363 12.1568 6.16007C11.0298 6.57678 10.365 6.78579 10.1689 6.78579C9.90648 6.78579 9.30806 6.60704 8.37607 6.25454C7.44144 5.90323 6.68934 5.72448 6.11582 5.72448C5.06765 5.74204 4.09435 6.0166 3.19356 6.55537C2.29277 7.09415 1.57305 7.82807 1.03205 8.75846C0.343674 9.91676 0 11.299 0 12.9016C0 14.3006 0.254899 15.7457 0.763378 17.2381C1.23816 18.6197 1.84421 19.8316 2.58136 20.8767C3.26842 21.8553 3.84194 22.5461 4.30047 22.9491C5.01887 23.6222 5.73859 23.9425 6.46066 23.9115C6.93545 23.8953 7.55643 23.7315 8.32728 23.417C9.09696 23.1041 9.81654 22.9491 10.4875 22.9491C11.1272 22.9491 11.8269 23.1041 12.5882 23.417C13.347 23.7315 13.9989 23.8864 14.5395 23.8864C15.2925 23.8687 15.9956 23.5573 16.6519 22.9491C17.0753 22.5786 17.6246 21.9114 18.2956 20.9475Z" fill="white" />
+                                    </svg>
+                                </div>
+                                <div class="flex flex-col gap-1">
+                                    <div class="text-7 md:text-8 text-white font-rubik font-medium leading-[1] uppercase">
+                                        AVAILABLE ON THE
+                                    </div>
+                                    <div class="text-sm md:text-lg text-white font-normal font-rubik leading-[1]">
+                                        App Store
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <!--play-store-->
+                    <div>
+                        <a href="#">
+                            <div class="flex justify-center items-center gap-4 bg-second-bg px-3 py-2 rounded-sm">
+                                <div>
+                                    <svg width="23" height="25" viewBox="0 0 23 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M16.3817 8.20573L12.8356 11.7832L12.8342 11.7817L1.14011 0C1.42142 0.000412562 1.69764 0.0756868 1.9408 0.218206L16.3817 8.20573ZM9.29506e-06 22.9505V22.5856L0 22.5779V1.67725L9.29506e-06 1.66955V1.31212C9.29506e-06 0.746495 0.196619 0.31439 0.51433 0.127765L12.4093 12.1148L12.2692 12.2561V12.2634L11.7147 12.8154L0.504357 24.1234C0.19377 23.9166 0.0042703 23.5161 9.29506e-06 22.9505ZM12.8356 12.4479L1.1045 24.2813C1.39893 24.2862 1.68895 24.2087 1.94223 24.0573L16.4116 16.0483L12.8356 12.4479ZM16.8077 8.44117L21.6132 11.1042H21.6133C22.6276 11.6655 22.6276 12.5943 21.6118 13.1585L16.8347 15.8143L13.1647 12.1162L16.8077 8.44117Z" fill="white" />
+                                    </svg>
+                                </div>
+                                <div class="flex flex-col gap-1">
+                                    <div class="text-7 md:text-8 text-white font-rubik font-medium leading-[1] uppercase">
+                                        GET IT ON
+                                    </div>
+                                    <div class="text-sm md:text-lg text-white font-normal font-rubik leading-[1]">
+                                        Google Play
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--hero-section-->
+    <div class="boost-ball-hero-section mx-auto w-full pt-25 sm:pt-27.5 bg-linear-to-b from-20ADFD to-CC00FF">
+        <div class="max-w-container mx-auto">
+            <div class="boost-ball-hero-section-content max-w-1095px mx-auto flex flex-col md:flex-row justify-between items-center gap-7 md:gap-0 2xl:mx-0 px-0 sm:px-12 lg:px-25 xl:px-0">
+                <!--left-->
+                <div class="flex flex-col items-start sm:items-center md:items-start gap-5 sm:gap-2 w-full max-w-650px px-8 md:px-0">
+                    <div class="text-44 sm:text-4xl md:text-5xl lg:text-6xl xl:text-h1 text-white font-normal font-carter leading-[1.05]">
+                        Boost Ball
+                    </div>
+                    <div class="text-h4 sm:text-10 md:text-xs xl:text-h4 text-white text-start sm:text-center md:text-start font-bold font-circular-std leading-[1.14] sm:pr-11 md:pr-17 lg:pr-19">
+                        Snake draft your way to a roster full of players, and select 1
+                        member from your team to compete with a 2X multiplier. Score
+                        points based on their in-game accomplishments.
+                    </div>
+                </div>
+                <!--right-->
+                <div class="relative w-full max-w-320px md:max-w-272 lg:max-w-[420px] flex-shrink-0 -mb-2 md:-mb-5">
+                    <img src="./assets/img/boost-ball-html/boost-hero/iPhoneXPortrait.webp" alt="" class="pr-4 max-w-167px lg:max-w-none xl:max-w-none justify-self-end" />
+
+                    <div class="athlete-card absolute top-31/100 md:-left-15/100 -xl:left-20/100 rounded-xl">
+                        <div class="athlet-card-cont max-w-228px lg:max-w-316px p-2.5 lg:py-4 lg:px-3.5 rounded-lg sm:rounded-xl flex justify-center items-center gap-2 bg-191F3A">
+                            <!--left-->
+                            <div class="flex-shrink-0 relative p-2px rounded-xl bg-linear-to-b from-20ADFD to-CC00FF">
+                                <div class="relative z-10 rounded-xl bg-[url('../img/boost-ball-html/boost-hero/Mini-Card-Background.webp')] bg-cover bg-center bg-no-repeat">
+                                    <img src="./assets/img/boost-ball-html/boost-hero/athlete-photo.webp" alt="" class="max-w-90px lg:max-w-none rounded-xl" />
+                                    <div class="absolute bottom-0 left-0 w-full mb-3px xl:mb-0 py-2 lg:py-13px z-20 rounded-xl bg-primary-bg"></div>
+                                    <div class="absolute z-30 top-0 left-0 rounded-xl w-full h-full">
+                                        <div class="w-full h-full flex flex-col justify-between items-start pt-6px">
+                                            <div class="ml-6px py-1px px-2 rounded-xl bg-FFE082 text-9 text-primary-bg font-bold font-circular-std">
+                                                TE
+                                            </div>
+                                            <div class="w-full flex flex-col gap-1 lg:gap-2 rounded-xl bg-linear-to-t from-primary-bg from-20% lg:from-30% to-transparent">
+                                                <div class="pl-6px text-xs lg:text-base text-white font-bold font-circular-std">
+                                                    <span class="text-10 lg:text-xs font-normal block">
+                                                        Patrick
+                                                    </span>
+                                                    <span class="block leading-[1]"> Mahomes </span>
+                                                    <span class="text-10 lg:text-xs font-normal block">
+                                                        Chiefs
+                                                    </span>
+                                                </div>
+                                                <div class="w-full flex justify-between items-center pb-2px lg:pb-2 pl-6px">
+                                                    <div class="text-5 md:text-8 font-normal font-circular-std text-white leading-[1]">
+                                                        60.22 Proj
+                                                    </div>
+                                                    <div class="flex pr-2 items-center">
+                                                        <div>
+                                                            <div class="block xl:hidden">
+                                                                <svg width="8" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M6.54091 12.151C9.81064 11.9797 12.3224 9.1901 12.151 5.92037C11.9797 2.65064 9.1901 0.138914 5.92037 0.310273C2.65064 0.481633 0.138914 3.27119 0.310273 6.54091C0.481633 9.81064 3.27119 12.3224 6.54091 12.151ZM5.97119 10.5737C6.01664 10.5875 6.06244 10.593 6.10744 10.5907C6.23611 10.5839 6.35752 10.5142 6.42624 10.3982L9.29588 5.5777C9.37044 5.45229 9.36979 5.29639 9.29477 5.1713C9.21935 5.04623 9.08135 4.97312 8.93571 4.98075L6.61255 5.1025L6.76896 2.28707C6.77924 2.10566 6.66413 1.94072 6.48998 1.88771C6.31579 1.83391 6.12805 1.90668 6.03493 2.06314L3.16569 6.88366C3.09113 7.00907 3.09139 7.16499 3.1668 7.29006C3.24222 7.41513 3.38022 7.48824 3.52586 7.48061L5.84862 7.35888L5.69222 10.1743C5.68194 10.3557 5.79744 10.5206 5.97119 10.5737Z" fill="#FED428" />
+                                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M6.54091 12.151C9.81064 11.9797 12.3224 9.1901 12.151 5.92037C11.9797 2.65064 9.1901 0.138914 5.92037 0.310273C2.65064 0.481633 0.138914 3.27119 0.310273 6.54091C0.481633 9.81064 3.27119 12.3224 6.54091 12.151ZM5.97119 10.5737C6.01664 10.5875 6.06244 10.593 6.10744 10.5907C6.23611 10.5839 6.35752 10.5142 6.42624 10.3982L9.29588 5.5777C9.37044 5.45229 9.36979 5.29639 9.29477 5.1713C9.21935 5.04623 9.08135 4.97312 8.93571 4.98075L6.61255 5.1025L6.76896 2.28707C6.77924 2.10566 6.66413 1.94072 6.48998 1.88771C6.31579 1.83391 6.12805 1.90668 6.03493 2.06314L3.16569 6.88366C3.09113 7.00907 3.09139 7.16499 3.1668 7.29006C3.24222 7.41513 3.38022 7.48824 3.52586 7.48061L5.84862 7.35888L5.69222 10.1743C5.68194 10.3557 5.79744 10.5206 5.97119 10.5737Z" fill="url(#paint0_radial_4639_1671)" fill-opacity="0.3" />
+                                                                    <defs>
+                                                                        <radialGradient id="paint0_radial_4639_1671" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(6.01345 2.08638) rotate(87) scale(10.0784 7.62132)">
+                                                                            <stop offset="0.015625" stop-color="#FDF300" />
+                                                                            <stop offset="0.015725" stop-color="#FFF8BD" />
+                                                                            <stop offset="0.526042" stop-color="#FED428" />
+                                                                            <stop offset="1" stop-color="#FE8F28" />
+                                                                        </radialGradient>
+                                                                    </defs>
+                                                                </svg>
+                                                            </div>
+                                                            <div class="hidden xl:block">
+                                                                <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M6.54091 12.151C9.81064 11.9797 12.3224 9.1901 12.151 5.92037C11.9797 2.65064 9.1901 0.138914 5.92037 0.310273C2.65064 0.481633 0.138914 3.27119 0.310273 6.54091C0.481633 9.81064 3.27119 12.3224 6.54091 12.151ZM5.97119 10.5737C6.01664 10.5875 6.06244 10.593 6.10744 10.5907C6.23611 10.5839 6.35752 10.5142 6.42624 10.3982L9.29588 5.5777C9.37044 5.45229 9.36979 5.29639 9.29477 5.1713C9.21935 5.04623 9.08135 4.97312 8.93571 4.98075L6.61255 5.1025L6.76896 2.28707C6.77924 2.10566 6.66413 1.94072 6.48998 1.88771C6.31579 1.83391 6.12805 1.90668 6.03493 2.06314L3.16569 6.88366C3.09113 7.00907 3.09139 7.16499 3.1668 7.29006C3.24222 7.41513 3.38022 7.48824 3.52586 7.48061L5.84862 7.35888L5.69222 10.1743C5.68194 10.3557 5.79744 10.5206 5.97119 10.5737Z" fill="#FED428" />
+                                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M6.54091 12.151C9.81064 11.9797 12.3224 9.1901 12.151 5.92037C11.9797 2.65064 9.1901 0.138914 5.92037 0.310273C2.65064 0.481633 0.138914 3.27119 0.310273 6.54091C0.481633 9.81064 3.27119 12.3224 6.54091 12.151ZM5.97119 10.5737C6.01664 10.5875 6.06244 10.593 6.10744 10.5907C6.23611 10.5839 6.35752 10.5142 6.42624 10.3982L9.29588 5.5777C9.37044 5.45229 9.36979 5.29639 9.29477 5.1713C9.21935 5.04623 9.08135 4.97312 8.93571 4.98075L6.61255 5.1025L6.76896 2.28707C6.77924 2.10566 6.66413 1.94072 6.48998 1.88771C6.31579 1.83391 6.12805 1.90668 6.03493 2.06314L3.16569 6.88366C3.09113 7.00907 3.09139 7.16499 3.1668 7.29006C3.24222 7.41513 3.38022 7.48824 3.52586 7.48061L5.84862 7.35888L5.69222 10.1743C5.68194 10.3557 5.79744 10.5206 5.97119 10.5737Z" fill="url(#paint0_radial_4639_1671)" fill-opacity="0.3" />
+                                                                    <defs>
+                                                                        <radialGradient id="paint0_radial_4639_1671" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(6.01345 2.08638) rotate(87) scale(10.0784 7.62132)">
+                                                                            <stop offset="0.015625" stop-color="#FDF300" />
+                                                                            <stop offset="0.015725" stop-color="#FFF8BD" />
+                                                                            <stop offset="0.526042" stop-color="#FED428" />
+                                                                            <stop offset="1" stop-color="#FE8F28" />
+                                                                        </radialGradient>
+                                                                    </defs>
+                                                                </svg>
+                                                            </div>
+                                                        </div>
+                                                        <div class="font-black font-circular-std text-7 lg:text-10 leading-[1] text-FED428">
+                                                            2x
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--right-->
+                            <div class="flex flex-col gap-1 lg:gap-3">
+                                <div class="flex flex-col gap-1px">
+                                    <div class="text-base lg:text-lg text-DAE2FB font-normal font-carter [-webkit-background-clip:text] [-webkit-text-stroke:4px_transparent] bg-linear-to-b from-20ADFD to-CC00FF">
+                                        Boost Ball
+                                    </div>
+                                    <div class="text-9 lg:text-xs text-white font-normal font-circular-std leading-[1.3]">
+                                        Boost an athlete’s score by
+                                        <span class="font-black text-FED428">2x</span>
+                                        for the week!
+                                    </div>
+                                </div>
+                                <div class="flex flex-col">
+                                    <div class="text-8 lg:text-10 text-8087A9 font-normal font-circular-std leading-[1.2]">
+                                        Selection locks
+                                    </div>
+                                    <div class="text-8 lg:text-xs text-A6ABC3 font-normal font-circular-std leading-[1.3]">
+                                        Mon 9/23
+                                    </div>
+                                    <div class="text-8 lg:text-xs text-A6ABC3 font-normal font-circular-std leading-[1.3]">
+                                        3:30 PM PDT
+                                    </div>
+                                </div>
+                                <div class="mb-1 lg:mb-6px">
+                                    <a href="#" class="py-1 lg:py-6px px-2 lg:px-3 rounded-2xl text-9 lg:text-10 xl:text-xs text-FED428 font-medium font-circular-std leading-[1] bg-FED4281A">
+                                        Update Athlete
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--feature-section-->
+    <div class="features-section w-full mx-auto pb-15 sm:pb-10 lg:pb-70px pt-14 sm:pt-30px lg:pt-14">
+        <div class="features-section-content mx-auto max-w-1197px w-full flex flex-col items-center gap-9 sm:gap-7">
+            <div class="hidden sm:block text-h2 text-title font-normal font-carter leading-[1.12]">
+                Draft Today & Boost Away
+            </div>
+            <div class="block sm:hidden text-h2 text-title text-center font-normal font-carter leading-[1.12]">
+                Features or details header
+            </div>
+            <div class="w-full max-w-315px sm:max-w-full sm:px-5 flex flex-col sm:flex-row justify-between items-center gap-10 sm:gap-0">
+                <div class="block sm:hidden flex-shrink-0">
+                    <img src="./assets/img/boost-ball-html/features/iPhone-X-Portrait.webp" alt="" id="tab-img" class="max-w-302px" />
+                </div>
+                <div class="tab-container sm:max-w-200px lg:max-w-334px flex flex-col justify-end gap-10.5 sm:gap-6 md:gap-8 lg:gap-10 xl:gap-14">
+                    <div class="tab-items p-1 flex flex-col gap-3 sm:gap-2 lg:gap-3  hover:bg-third-bg-26 border border-transparent rounded-lg hover:border-third-bg" data-img="./assets/img/app-section/iPhone.webp">
+                        <div class="text-h4 sm:text-xs lg:text-h4 text-primary-bg font-bold font-circular-std leading-[1.14]">
+                            Snake Draft
+                        </div>
+                        <div class="pr-1 text-base sm:text-10 lg:text-base text-60657F font-normal font-circular-std leading-[1.5]">
+                            Select your roster via our beautiful draft board!
+                        </div>
+                    </div>
+                    <div class="tab-items p-1 flex flex-col gap-3 sm:gap-2 lg:gap-3 hover:bg-third-bg-26 border border-transparent rounded-lg hover:border-third-bg" data-img="./assets/img/app-section/iPhone1.webp">
+                        <div class="text-h4 sm:text-xs lg:text-h4 text-primary-bg font-bold font-circular-std leading-[1.14]">
+                            Boost Player
+                        </div>
+                        <div class="text-base sm:text-10 lg:text-base text-60657F font-normal font-circular-std leading-[1.5]">
+                            Each week, pick 1 player to 2x their score. Simple as that.
+                        </div>
+                    </div>
+                    <div class="tab-items p-1 flex flex-col gap-3 sm:gap-2 lg:gap-3 hover:bg-third-bg-26 border border-transparent rounded-lg hover:border-third-bg" data-img="./assets/img/app-section/iPhone2.webp">
+                        <div class="text-h4 sm:text-xs lg:text-h4 text-primary-bg font-bold font-circular-std leading-[1.14]">
+                            Cash Leagues
+                        </div>
+                        <div class="text-base sm:text-10 lg:text-base text-60657F font-normal font-circular-std leading-[1.5]">
+                            Wanna spice it up? Invite your friends to play for cash and
+                            we’ll handle the rest!
+                        </div>
+                    </div>
+                </div>
+                <div class="hidden sm:block flex-shrink-0">
+                    <img src="./assets/img/boost-ball-html/features/iPhone-X-Portrait.webp" alt="" id="tab-img-2" class="max-w-167px md:max-w-200px lg:max-w-250px xl:max-w-none" />
+                </div>
+                <div class="tab-container sm:max-w-210px lg:max-w-367px flex flex-col gap-10.5 sm:gap-6 md:gap-8 lg:gap-10 xl:gap-14">
+                    <div class="tab-items p-1 sm:pt-0 flex flex-col gap-3 sm:gap-2 lg:gap-3 hover:bg-third-bg-26 border border-transparent rounded-lg hover:border-third-bg" data-img="./assets/img/app-section/iPhone.webp">
+                        <div class="sm:whitespace-nowrap text-h4 sm:text-xs lg:text-h4 text-primary-bg font-bold font-circular-std leading-[1.14]">
+                            Play With Friends or Vs The World
+                        </div>
+                        <div class="sm:whitespace-nowrap sm:pb-6 text-base sm:text-10 lg:text-base text-60657F font-normal font-circular-std leading-[1.5]">
+                            Play private or public contests - It’s up to you!
+                        </div>
+                    </div>
+                    <div class="tab-items p-1 flex flex-col gap-3 sm:gap-2 lg:gap-3 hover:bg-third-bg-26 border border-transparent rounded-lg hover:border-third-bg" data-img="./assets/img/app-section/iPhone1.webp">
+                        <div class="text-h4 sm:text-xs lg:text-h4 text-primary-bg font-bold font-circular-std leading-[1.14]">
+                            Talk Trash, Smack, ‘n All That
+                        </div>
+                        <div class="sm:pb-6 text-base sm:text-10 lg:text-base text-60657F font-normal font-circular-std leading-[1.5]">
+                            Chat away and take home glory.
+                        </div>
+                    </div>
+                    <div class="tab-items p-1 flex flex-col gap-3 sm:gap-2 lg:gap-3 hover:bg-third-bg-26 border border-transparent rounded-lg hover:border-third-bg" data-img="./assets/img/app-section/iPhone2.webp">
+                        <div class="text-h4 sm:text-xs lg:text-h4 text-primary-bg font-bold font-circular-std leading-[1.14]">
+                            Choose Your Timeframe
+                        </div>
+                        <div class="text-base sm:text-10 lg:text-base text-60657F font-normal font-circular-std leading-[1.5]">
+                            1 Week? 1 Month? 6 Weeks? Season-Long? It’s up to you!
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--how-to-play-->
+    <div class="hidden sm:block how-to-play-section w-full mx-auto px-3 lg:px-0 pb-12">
+        <div class="how-to-play-section-container max-w-970px xl:max-w-1116px mx-auto py-8 xl:py-12 px-8 xl:px-15 rounded-xl xl:rounded-2xl flex justify-between items-center bg-primary-bg">
+            <div class="flex flex-col gap-2 lg:gap-4 flex-shrink-0">
+                <div class="text-h3 lg:text-h2 text-white font-normal font-carter leading-[1.12]">
+                    How to play
+                </div>
+                <div class="text-xs md:text-base lg:text-h4 text-white font-bold font-circular-std leading-[1.14]">
+                    Snake draft your way to a roster full of players.
+                </div>
+            </div>
+            <div class="max-w-250px lg:max-w-370px xl:max-w-400px w-full h-150px lg:h-226px bg-D9D9D9"></div>
+        </div>
+    </div>
+    <!--offers-->
+    <div class="offers-container mx-auto w-full bg-linear-to-br from-864BEC to-EC32B8">
+        <div class="offers-content max-w-1370px w-full mx-auto flex flex-col-reverse sm:flex-row gap-3 justify-between items-center">
+            <div class="sm:-mt-15px lg:-mt-6 xl:-mt-4.5">
+                <img src="./assets/img/boost-ball-html/offers/Frame-left.webp" alt="" class="max-w-315px sm:max-w-209px lg:max-w-267px xl:max-w-none">
+            </div>
+            <div class="flex flex-col items-center gap-2 md:gap-3 lg:gap-4 xl:gap-6">
+                <div class="px-10 pb-2 sm:pb-0 sm:px-0 text-55 sm:text-28 md:text-4xl lg:text-55 text-center sm:text-start text-white font-normal font-carter leading-[60px] sm:leading-normal">
+                    Have $10 On Us
+                </div>
+                <div class="flex gap-2">
+                    <!--app-store-->
+                    <div>
+                        <a href="#">
+                            <div class="flex justify-center items-center gap-5.5 bg-primary-bg px-3 py-2 sm:px-2 sm:py-1 md:px-3 md:py-2 rounded-sm">
+                                <div>
+                                    <svg width="20" height="24" viewBox="0 0 20 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M13.6942 3.82458C14.5585 2.79102 14.9922 1.67436 14.9922 0.478405V0.478391C14.9922 0.319769 14.9848 0.159877 14.9673 0C14.3652 0.0314709 13.725 0.215275 13.0482 0.547635C12.3699 0.885028 11.8106 1.30798 11.3708 1.81664C10.49 2.82128 9.99394 4.04998 9.99394 5.1981C9.99394 5.35678 10.004 5.50778 10.0215 5.65126C11.3896 5.7633 12.6512 5.05329 13.6942 3.82458ZM18.2956 20.9475C18.7878 20.2405 19.2126 19.4714 19.5715 18.636C19.7195 18.2817 19.8587 17.9127 19.9905 17.5274C19.3826 17.2706 18.8361 16.9089 18.3469 16.441C17.2672 15.4328 16.7179 14.1631 16.7017 12.6372C16.6842 10.6783 17.5675 9.15125 19.3533 8.061C18.3557 6.63213 16.8556 5.83902 14.8588 5.67665C14.122 5.61362 13.2225 5.77363 12.1568 6.16007C11.0298 6.57678 10.365 6.78579 10.1689 6.78579C9.90648 6.78579 9.30806 6.60704 8.37607 6.25454C7.44144 5.90323 6.68934 5.72448 6.11582 5.72448C5.06765 5.74204 4.09435 6.0166 3.19356 6.55537C2.29277 7.09415 1.57305 7.82807 1.03205 8.75846C0.343674 9.91676 0 11.299 0 12.9016C0 14.3006 0.254899 15.7457 0.763378 17.2381C1.23816 18.6197 1.84421 19.8316 2.58136 20.8767C3.26842 21.8553 3.84194 22.5461 4.30047 22.9491C5.01887 23.6222 5.73859 23.9425 6.46066 23.9115C6.93545 23.8953 7.55643 23.7315 8.32728 23.417C9.09696 23.1041 9.81654 22.9491 10.4875 22.9491C11.1272 22.9491 11.8269 23.1041 12.5882 23.417C13.347 23.7315 13.9989 23.8864 14.5395 23.8864C15.2925 23.8687 15.9956 23.5573 16.6519 22.9491C17.0753 22.5786 17.6246 21.9114 18.2956 20.9475Z" fill="white" />
+                                    </svg>
+                                </div>
+                                <div class="flex flex-col gap-1">
+                                    <div class="text-7 sm:text-4 md:text-5 lg:text-8 text-white font-rubik font-medium leading-[1] uppercase">
+                                        AVAILABLE ON THE
+                                    </div>
+                                    <div class="text-sm sm:text-8 md:text-xs lg:text-lg text-white font-normal font-rubik leading-[1]">
+                                        App Store
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <!--play-store-->
+                    <div>
+                        <a href="#">
+                            <div class="flex justify-center items-center gap-4 md:gap-2.5 lg:gap-4 bg-primary-bg px-3 py-2 sm:px-2 sm:py-1 md:px-3 md:py-2 rounded-sm">
+                                <div>
+                                    <svg width="23" height="25" viewBox="0 0 23 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M16.3817 8.20573L12.8356 11.7832L12.8342 11.7817L1.14011 0C1.42142 0.000412562 1.69764 0.0756868 1.9408 0.218206L16.3817 8.20573ZM9.29506e-06 22.9505V22.5856L0 22.5779V1.67725L9.29506e-06 1.66955V1.31212C9.29506e-06 0.746495 0.196619 0.31439 0.51433 0.127765L12.4093 12.1148L12.2692 12.2561V12.2634L11.7147 12.8154L0.504357 24.1234C0.19377 23.9166 0.0042703 23.5161 9.29506e-06 22.9505ZM12.8356 12.4479L1.1045 24.2813C1.39893 24.2862 1.68895 24.2087 1.94223 24.0573L16.4116 16.0483L12.8356 12.4479ZM16.8077 8.44117L21.6132 11.1042H21.6133C22.6276 11.6655 22.6276 12.5943 21.6118 13.1585L16.8347 15.8143L13.1647 12.1162L16.8077 8.44117Z" fill="white" />
+                                    </svg>
+                                </div>
+                                <div class="flex flex-col gap-1">
+                                    <div class="text-7 sm:text-4 md:text-5 lg:text-8 text-white font-rubik font-medium leading-[1] uppercase">
+                                        GET IT ON
+                                    </div>
+                                    <div class="text-sm sm:text-8 md:text-xs lg:text-lg text-white font-normal font-rubik leading-[1]">
+                                        Google Play
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="hidden sm:block sm:-mt-4 lg:-mt-5 xl:-mt-7 xl:-mb-5px">
+                <img src="./assets/img/boost-ball-html/offers/Frame-right.webp" alt="" class="max-w-200px lg:max-w-250px xl:max-w-none">
+            </div>
+        </div>
+    </div>
+    <!--info-->
+    <div class="info-container w-full mx-auto bg-000016">
+        <div class="info-content max-w-1116px pb-15 pt-12 w-full mx-auto flex flex-col gap-7 items-center">
+            <!--top-->
+            <div class="text-h2 text-center sm:text-start text-third-bg font-normal font-carter leading-[1.12]">
+                Questions or rules and info
+            </div>
+            <!--btm-->
+            <div class="accordian-container flex flex-col lg:flex-row gap-4 justify-center">
+                <div class="flex flex-col gap-3">
+                    <div class="accordian-items max-w-334px sm:max-w-500px w-full flex flex-col justify-between p-4 rounded-lg bg-white">
+                        <div class="accordian-header w-full flex justify-between">
+                            <div class="text-h5 text-primary-bg font-bold font-circular-std leading-[1.3]">
+                                Lorem ipsum dolor sit amet, consectetur adipi saccing elit
+                            </div>
+                            <div class="indicator relative">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="minus absolute transition-transform duration-300">
+                                    <rect x="3.57764" y="10.9819" width="16.8734" height="2.00192" fill="#651FFF" />
+                                </svg>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="minus">
+                                    <rect x="3.57764" y="10.9819" width="16.8734" height="2.00192" fill="#651FFF" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="toggle-text text-base text-60657F font-normal font-circular-std leading-[1.5] pt-1">
+                            Cras in nisl lectus. Nullam ac libero ac sapien faucibus lacinia ac id odio. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras in nisl lectus. Nullam ac libero ac sapien faucibus lacinia.
+                        </div>
+                    </div>
+                    <div class="accordian-items max-w-334px sm:max-w-500px w-full flex flex-col justify-between p-4 rounded-lg bg-white">
+                        <div class="accordian-header w-full flex justify-between">
+                            <div class="text-h5 text-primary-bg font-bold font-circular-std leading-[1.3]">
+                                Proin blandit quam justo, sit amet euismod sem tempor quis.
+                            </div>
+                            <div class="indicator relative">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="minus absolute transition-transform duration-300 rotate-90">
+                                    <rect x="3.57764" y="10.9819" width="16.8734" height="2.00192" fill="#651FFF" />
+                                </svg>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="minus">
+                                    <rect x="3.57764" y="10.9819" width="16.8734" height="2.00192" fill="#651FFF" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="toggle-text hidden text-base text-60657F font-normal font-circular-std leading-[1.5] pt-1">
+                            Cras in nisl lectus. Nullam ac libero ac sapien faucibus lacinia ac id odio. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras in nisl lectus. Nullam ac libero ac sapien faucibus lacinia.
+                        </div>
+                    </div>
+                    <div class="accordian-items max-w-334px sm:max-w-500px w-full flex flex-col justify-between p-4 rounded-lg bg-white">
+                        <div class="accordian-header w-full flex justify-between">
+                            <div class="text-h5 text-primary-bg font-bold font-circular-std leading-[1.3]">
+                                Lorem ipsum dolor sit amet
+                            </div>
+                            <div class="indicator relative">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="minus absolute transition-transform duration-300 rotate-90">
+                                    <rect x="3.57764" y="10.9819" width="16.8734" height="2.00192" fill="#651FFF" />
+                                </svg>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="minus">
+                                    <rect x="3.57764" y="10.9819" width="16.8734" height="2.00192" fill="#651FFF" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="toggle-text hidden text-base text-60657F font-normal font-circular-std leading-[1.5] pt-1">
+                            Cras in nisl lectus. Nullam ac libero ac sapien faucibus lacinia ac id odio. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras in nisl lectus. Nullam ac libero ac sapien faucibus lacinia.
+                        </div>
+                    </div>
+                    <div class="block lg:hidden accordian-items max-w-334px sm:max-w-500px w-full flex flex-col justify-between p-4 rounded-lg bg-white">
+                        <div class="accordian-header w-full flex justify-between">
+                            <div class="text-h5 text-primary-bg font-bold font-circular-std leading-[1.3]">
+                                Lorem ipsum dolor sit amet
+                            </div>
+                            <div class="indicator relative">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="minus absolute transition-transform duration-300 rotate-90">
+                                    <rect x="3.57764" y="10.9819" width="16.8734" height="2.00192" fill="#651FFF" />
+                                </svg>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="minus">
+                                    <rect x="3.57764" y="10.9819" width="16.8734" height="2.00192" fill="#651FFF" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="toggle-text hidden text-base text-60657F font-normal font-circular-std leading-[1.5] pt-1">
+                            Cras in nisl lectus. Nullam ac libero ac sapien faucibus lacinia ac id odio. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras in nisl lectus. Nullam ac libero ac sapien faucibus lacinia.
+                        </div>
+                    </div>
+                    <div class="block lg:hidden accordian-items max-w-334px sm:max-w-500px w-full flex flex-col justify-between p-4 rounded-lg bg-white">
+                        <div class="accordian-header w-full flex justify-between">
+                            <div class="text-h5 text-primary-bg font-bold font-circular-std leading-[1.3]">
+                                Proin blandit quam justo, sit amet euismod sem tempor quis.
+                            </div>
+                            <div class="indicator relative">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="minus absolute transition-transform duration-300 rotate-90">
+                                    <rect x="3.57764" y="10.9819" width="16.8734" height="2.00192" fill="#651FFF" />
+                                </svg>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="minus">
+                                    <rect x="3.57764" y="10.9819" width="16.8734" height="2.00192" fill="#651FFF" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="toggle-text hidden text-base text-60657F font-normal font-circular-std leading-[1.5] pt-1">
+                            Cras in nisl lectus. Nullam ac libero ac sapien faucibus lacinia ac id odio. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras in nisl lectus. Nullam ac libero ac sapien faucibus lacinia.
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-col hidden lg:block">
+                    <div class="accordian-items max-w-500px w-full mb-3 flex flex-col justify-between p-4 rounded-lg bg-white">
+                        <div class="accordian-header w-full flex justify-between">
+                            <div class="text-h5 text-primary-bg font-bold font-circular-std leading-[1.3]">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam laoreet elit ut leo mattis bibendum
+                            </div>
+                            <div class="indicator relative">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="minus absolute transition-transform duration-300">
+                                    <rect x="3.57764" y="10.9819" width="16.8734" height="2.00192" fill="#651FFF" />
+                                </svg>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="minus">
+                                    <rect x="3.57764" y="10.9819" width="16.8734" height="2.00192" fill="#651FFF" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="toggle-text text-base text-60657F font-normal font-circular-std leading-[1.5] pt-1">
+                            Cras in nisl lectus. Nullam ac libero ac sapien faucibus lacinia ac id odio. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras in nisl lectus. Nullam ac libero ac sapien faucibus lacinia.
+                        </div>
+                    </div>
+                    <div class="accordian-items max-w-500px w-full mb-3 flex flex-col justify-between p-4 rounded-lg bg-white">
+                        <div class="accordian-header w-full flex justify-between">
+                            <div class="text-h5 text-primary-bg font-bold font-circular-std leading-[1.3]">
+                                Lorem ipsum dolor sit amet
+                            </div>
+                            <div class="indicator relative">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="minus absolute transition-transform duration-300 rotate-90">
+                                    <rect x="3.57764" y="10.9819" width="16.8734" height="2.00192" fill="#651FFF" />
+                                </svg>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="minus">
+                                    <rect x="3.57764" y="10.9819" width="16.8734" height="2.00192" fill="#651FFF" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="toggle-text hidden text-base text-60657F font-normal font-circular-std leading-[1.5] pt-1">
+                            Cras in nisl lectus. Nullam ac libero ac sapien faucibus lacinia ac id odio. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras in nisl lectus. Nullam ac libero ac sapien faucibus lacinia.
+                        </div>
+                    </div>
+                    <div class="accordian-items max-w-500px w-full flex flex-col justify-between p-4 rounded-lg bg-white">
+                        <div class="accordian-header w-full flex justify-between">
+                            <div class="text-h5 text-primary-bg font-bold font-circular-std leading-[1.3]">
+                                Proin blandit quam justo, sit amet euismod sem tempor quis.
+                            </div>
+                            <div class="indicator relative">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="minus absolute transition-transform duration-300 rotate-90">
+                                    <rect x="3.57764" y="10.9819" width="16.8734" height="2.00192" fill="#651FFF" />
+                                </svg>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="minus">
+                                    <rect x="3.57764" y="10.9819" width="16.8734" height="2.00192" fill="#651FFF" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="toggle-text hidden text-base text-60657F font-normal font-circular-std leading-[1.5] pt-1">
+                            Cras in nisl lectus. Nullam ac libero ac sapien faucibus lacinia ac id odio. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras in nisl lectus. Nullam ac libero ac sapien faucibus lacinia.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--sign-up-->
+    <div class="signup-section w-full mx-auto pt-9.5 pb-7.5 sm:pt-7 sm:pb-7 bg-second-bg">
+        <div class="signup-content max-w-343px sm:max-w-container mx-auto flex flex-col md:flex-row items-center justify-center gap-8 md:gap-11 lg:gap-26 px-1 sm:px-2.5 sm:px-4 xl:px-0 wow fadeInUp">
+            <!--left-->
+            <div class="flex flex-col gap-5 sm:gap-1">
+                <div class="flex flex-col items-center md:items-start gap-2 sm:gap-2.5">
+                    <h4 class="text-white font-bold font-circular-std leading-[1.14] sm:whitespace-nowrap">
+                        For Laughs, Tips & Juicy Giveaways
+                    </h4>
+                    <div class="text-base text-white font-normal font-circular-std leading-[1.5] pr-11.5 sm:pr-0">
+                        Follow us across all social to never miss a beat.
+                    </div>
+                </div>
+                <div class="social-icons flex items-center xl:flex-row flex-col gap-7.5 lg:gap-9.5">
+                    <div class="w-full md:max-w-max flex justify-between md:gap-11">
+                        <div class="">
+                            <a href="#">
+                                <svg width="151" height="61" viewBox="0 0 151 61" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <rect width="150.034" height="60.0138" fill="url(#pattern0_4988_6157)" />
+                                    <defs>
+                                        <pattern id="pattern0_4988_6157" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                            <use xlink:href="#image0_4988_6157" transform="scale(0.00190476 0.0047619)" />
+                                        </pattern>
+                                        <image id="image0_4988_6157" width="525" height="210" preserveAspectRatio="none" xlink:href="data:image/png;base64,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" />
+                                    </defs>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="">
+                            <a href="#">
+                                <svg width="163" height="65" viewBox="0 0 163 65" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <rect width="162.244" height="64.8976" fill="url(#pattern0_4988_6158)" />
+                                    <defs>
+                                        <pattern id="pattern0_4988_6158" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                            <use xlink:href="#image0_4988_6158" transform="scale(0.00190476 0.0047619)" />
+                                        </pattern>
+                                        <image id="image0_4988_6158" width="525" height="210" preserveAspectRatio="none" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAg0AAADSBAMAAAA7we50AAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAtUExURUdwTP///////////////////////////////////////////////////////81e3QIAAAAOdFJOUwBvuuqFWykW1ZgLSDyoa8cO7AAACsxJREFUeNrtnf9rG+cdx8+OLMkn2djMoV03jKdtLBtEGLLVTccOpTNsKUy4Gw5lPwiXrem2NsIjW7pRMCKFrfQH4TTpIGU2Kh2seMOo0I7BilAbso51GJMVRmA1kc7R5Ni+v2HRfXs+d899eU736IuVz/uX6M6n557ndc/zeT7P5/OcIggoFAqFQqFQKBQKhUKhUCgUCoVCoVAoFAqFQqFQKBQKhUKhUCgUCoVCoVAoFAqF6qTEP1564eP3Fp+anJycmpo/c+b+v5OLi3/71/kXNx6I5r/w3tTZT1MvS4qHTl1O3T6z+P7PBhTBs5898bISRPLlTz63PGAU/vw9SWlH8hf+OUgYftweBZXEd3pU5+ikqs9zLPLXSgjJT/aGw4h2+11+JSakMByU5tKAcMgq4bQPyrp0XpWJJqYdn2ft7Oed1B0OESWsFkhhW9qZ/xnHo9pxnbEuw47ld4dDNjSHA1LYpq2LxIPVtoccEqExKPKyvSG7Ni4H/c/hYngOyoxZ2pBuO43jinY82/8c1jlwIJYyqvcQ26Db7nsOUQ4YyOMXhKJ2xpgw0tphue85jPLgoFTt3WtCP9Rdk1Lfc7jIhcOqWV7OciJK9Zd+5bDFhQOxgyvaiUJ7le0dh2kuHBr2luiO1FiwabOHHHa4cKjZvdN9ixs12/8c0lw47JnlJS3VWwk2bQoj86qe0M2KdjTfDQ6Swnni1Ao8tFifhYCVGmJYlfDlEOOCAXrWaehITVu9if7lkOTDATgQlqang02bveMwwokD6fl5eEJqr67d5xDhxCEj2Fbaq8CNOuh/DmOcOGzbyRZAXWf7n8MwJw4z9njGPUB5pv85xDlxuGOfOBuA8kT/czjGicM9u2emephvtTdt9oDDplfjAvhYDfuKZY+4UYGnzR5wyHs17hl2EPv2Ips2JC29NHX99jWWnGhQDh+8lrpmC/U8O7V2/16scQ8jfuisJfZEV40aaiVzEaczin1X98EfsqXmJlUy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" />
+                                    </defs>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="flex w-full justify-between xl:gap-10">
+                        <div>
+                            <a href="#">
+                                <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M23.6277 17.4967H32.0251V24.8991H23.6277V42.1714H15.2304V24.8991H6.83301V17.4967H15.2304V14.4C15.2304 11.4662 16.2772 7.76008 18.3598 5.73429C20.4423 3.70356 23.0427 2.69189 26.1581 2.69189H32.0251V10.0943H26.147C24.753 10.0943 23.6277 11.0862 23.6277 12.3126V17.4967Z" fill="white" />
+                                </svg>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <svg width="43" height="44" viewBox="0 0 43 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_4988_6151)">
+                                        <path d="M42.2072 8.18026C40.6376 8.88281 38.9652 9.34849 37.2215 9.5746C39.0153 8.48174 40.3844 6.76438 41.028 4.69439C39.3556 5.71189 37.509 6.4306 35.5411 6.83167C33.9531 5.10624 31.6897 4.0376 29.2206 4.0376C24.4301 4.0376 20.5734 8.00529 20.5734 12.8693C20.5734 13.5692 20.6314 14.2422 20.7739 14.8828C13.5802 14.5248 7.21479 11.0066 2.93868 5.64729C2.19214 6.96895 1.75424 8.48174 1.75424 10.1103C1.75424 13.1681 3.29744 15.8788 5.59773 17.4481C4.20753 17.4212 2.84371 17.0093 1.68829 16.3606C1.68829 16.3875 1.68829 16.4225 1.68829 16.4575C1.68829 20.7482 4.68764 24.3121 8.62082 25.1331C7.91649 25.3296 7.14884 25.4238 6.35218 25.4238C5.79821 25.4238 5.23897 25.3915 4.71402 25.2731C5.83514 28.7697 9.01651 31.3404 12.7993 31.4238C9.85538 33.7738 6.11741 35.1896 2.07079 35.1896C1.36118 35.1896 0.680591 35.1573 0 35.0685C3.83294 37.5907 8.37549 39.0308 13.2742 39.0308C29.1968 39.0308 37.9021 25.5719 37.9021 13.9057C37.9021 13.5154 37.8889 13.1385 37.8704 12.7644C39.5877 11.5208 41.0307 9.9676 42.2072 8.18026Z" fill="white" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_4988_6151">
+                                            <rect width="42.2072" height="43.0686" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <svg width="43" height="44" viewBox="0 0 43 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M25.6627 26.1864C26.9221 24.9013 27.5518 23.3505 27.5518 21.5342C27.5518 19.7179 26.9221 18.1671 25.6627 16.882C24.4032 15.5968 22.8835 14.9543 21.1035 14.9543C19.3235 14.9543 17.8038 15.5968 16.5443 16.882C15.2849 18.1671 14.6552 19.7179 14.6552 21.5342C14.6552 23.3505 15.2849 24.9013 16.5443 26.1864C17.8038 27.4715 19.3235 28.1141 21.1035 28.1141C22.8835 28.1141 24.4032 27.4715 25.6627 26.1864ZM28.1312 14.3631C30.0623 16.3337 31.0279 18.724 31.0279 21.5342C31.0279 24.3444 30.0623 26.7347 28.1312 28.7053C26.2 30.6758 23.8575 31.6611 21.1035 31.6611C18.3495 31.6611 16.007 30.6758 14.0758 28.7053C12.1447 26.7347 11.1791 24.3444 11.1791 21.5342C11.1791 18.724 12.1447 16.3337 14.0758 14.3631C16.007 12.3926 18.3495 11.4073 21.1035 11.4073C23.8575 11.4073 26.2 12.3926 28.1312 14.3631ZM33.0682 9.32536C33.5216 9.78801 33.7483 10.3449 33.7483 10.996C33.7483 11.6472 33.5216 12.2041 33.0682 12.6667C32.6148 13.1294 32.069 13.3607 31.4309 13.3607C30.7928 13.3607 30.247 13.1294 29.7936 12.6667C29.3402 12.2041 29.1135 11.6472 29.1135 10.996C29.1135 10.3449 29.3402 9.78801 29.7936 9.32536C30.247 8.86271 30.7928 8.63138 31.4309 8.63138C32.069 8.63138 32.6148 8.86271 33.0682 9.32536ZM23.0179 5.34142C21.8592 5.34142 21.2211 5.34142 21.1035 5.34142C20.986 5.34142 20.3395 5.34142 19.164 5.34142C18.0053 5.32429 17.1237 5.32429 16.5192 5.34142C15.9146 5.34142 15.1002 5.36712 14.0758 5.41853C13.0683 5.4528 12.2035 5.53848 11.4814 5.67556C10.7761 5.79551 10.18 5.94972 9.693 6.13821C8.85338 6.48091 8.11451 6.97784 7.47639 7.62897C6.83828 8.28011 6.35129 9.03406 6.01544 9.89082C5.83073 10.3877 5.6712 11.0046 5.53686 11.7414C5.41931 12.4611 5.33535 13.3436 5.28497 14.3888C5.25139 15.4169 5.2262 16.2394 5.2094 16.8563C5.2094 17.4732 5.2094 18.3813 5.2094 19.5808C5.2262 20.7631 5.23459 21.4142 5.23459 21.5342C5.23459 21.6541 5.2262 22.3138 5.2094 23.5133C5.2094 24.6956 5.2094 25.5952 5.2094 26.2121C5.2262 26.829 5.25139 27.66 5.28497 28.7053C5.33535 29.7334 5.41931 30.6159 5.53686 31.3527C5.6712 32.0724 5.83073 32.6807 6.01544 33.1776C6.35129 34.0343 6.83828 34.7883 7.47639 35.4394C8.11451 36.0906 8.85338 36.5875 9.693 36.9302C10.18 37.1187 10.7761 37.2815 11.4814 37.4185C12.2035 37.5385 13.0683 37.6242 14.0758 37.6756C15.1002 37.7098 15.9146 37.7355 16.5192 37.7527C17.1237 37.7527 18.0053 37.7527 19.164 37.7527C20.3395 37.7355 20.986 37.727 21.1035 37.727C21.2211 37.727 21.8592 37.7355 23.0179 37.7527C24.1933 37.7527 25.0833 37.7527 25.6879 37.7527C26.2924 37.7355 27.0984 37.7098 28.106 37.6756C29.1303 37.6242 29.9951 37.5385 30.7004 37.4185C31.4225 37.2815 32.027 37.1187 32.514 36.9302C33.3536 36.5875 34.0925 36.0906 34.7306 35.4394C35.3687 34.7883 35.8557 34.0343 36.1916 33.1776C36.3763 32.6807 36.5274 32.0724 36.645 31.3527C36.7793 30.6159 36.8633 29.7334 36.8969 28.7053C36.9472 27.66 36.9724 26.829 36.9724 26.2121C36.9892 25.5952 36.9892 24.6956 36.9724 23.5133C36.9724 22.3138 36.9724 21.6541 36.9724 21.5342C36.9724 21.4142 36.9724 20.7631 36.9724 19.5808C36.9892 18.3813 36.9892 17.4732 36.9724 16.8563C36.9724 16.2394 36.9472 15.4169 36.8969 14.3888C36.8633 13.3436 36.7793 12.4611 36.645 11.7414C36.5274 11.0046 36.3763 10.3877 36.1916 9.89082C35.8557 9.03406 35.3687 8.28011 34.7306 7.62897C34.0925 6.97784 33.3536 6.48091 32.514 6.13821C32.027 5.94972 31.4225 5.79551 30.7004 5.67556C29.9951 5.53848 29.1303 5.4528 28.106 5.41853C27.0984 5.36712 26.2924 5.34142 25.6879 5.34142C25.0833 5.32429 24.1933 5.32429 23.0179 5.34142ZM40.3225 13.3864C40.4065 14.8943 40.4485 17.6102 40.4485 21.5342C40.4485 25.4582 40.4065 28.1741 40.3225 29.682C40.1546 33.2461 39.1135 36.0049 37.1991 37.9583C35.2848 39.9117 32.5812 40.9741 29.0883 41.1454C27.6106 41.2311 24.949 41.274 21.1035 41.274C17.258 41.274 14.5964 41.2311 13.1187 41.1454C9.62583 40.9741 6.92224 39.9117 5.00789 37.9583C3.09355 36.0049 2.05241 33.2461 1.88449 29.682C1.80053 28.1741 1.75854 25.4582 1.75854 21.5342C1.75854 17.6102 1.80053 14.8943 1.88449 13.3864C2.05241 9.82228 3.09355 7.06351 5.00789 5.1101C6.92224 3.15668 9.62583 2.0943 13.1187 1.92295C14.5964 1.83727 17.258 1.79443 21.1035 1.79443C24.949 1.79443 27.6106 1.83727 29.0883 1.92295C32.5812 2.0943 35.2848 3.15668 37.1991 5.1101C39.1135 7.06351 40.1546 9.82228 40.3225 13.3864Z" fill="white" />
+                                </svg>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_4988_6155)">
+                                        <path d="M36.4592 8.06097C33.7136 6.82275 30.7706 5.90754 27.693 5.38713C27.6656 5.38187 27.6372 5.38526 27.6118 5.39683C27.5864 5.40841 27.5652 5.42759 27.5512 5.45173C27.1744 6.11391 26.7544 6.97708 26.4601 7.659C23.1961 7.17131 19.8777 7.17131 16.6136 7.659C16.2858 6.90325 15.9161 6.16636 15.5064 5.45173C15.4925 5.4273 15.4715 5.40768 15.4461 5.39549C15.4208 5.38331 15.3924 5.37914 15.3646 5.38354C12.2888 5.90395 9.34577 6.81916 6.59835 8.05918C6.57471 8.06909 6.55468 8.086 6.54093 8.10763C0.956367 16.3176 -0.574362 24.3247 0.177544 32.2314C0.179636 32.2508 0.185647 32.2695 0.195211 32.2865C0.204774 32.3034 0.217691 32.3183 0.233174 32.3301C3.49273 34.7032 7.12834 36.511 10.9878 37.6778C11.0147 37.6861 11.0434 37.686 11.0703 37.6777C11.0972 37.6694 11.121 37.6532 11.1385 37.6311C11.969 36.5204 12.7049 35.3421 13.3386 34.1085C13.3474 34.0916 13.3524 34.0731 13.3534 34.0541C13.3544 34.0351 13.3514 34.0161 13.3444 33.9984C13.3374 33.9807 13.3267 33.9647 13.313 33.9515C13.2993 33.9383 13.2829 33.9282 13.265 33.9218C12.1058 33.4853 10.9825 32.9585 9.90566 32.3463C9.88631 32.3352 9.87 32.3195 9.85821 32.3006C9.84641 32.2817 9.83949 32.2602 9.83806 32.238C9.83664 32.2157 9.84076 32.1935 9.85005 32.1732C9.85934 32.153 9.87352 32.1354 9.8913 32.1219C10.1174 31.9551 10.3435 31.781 10.5589 31.6069C10.5782 31.5913 10.6016 31.5813 10.6263 31.5781C10.651 31.575 10.6761 31.5787 10.6988 31.589C17.7459 34.7545 25.378 34.7545 32.3426 31.589C32.3654 31.5781 32.3907 31.5739 32.4158 31.5767C32.4409 31.5796 32.4646 31.5894 32.4844 31.6051C32.6997 31.781 32.924 31.9551 33.1519 32.1219C33.1699 32.1351 33.1843 32.1525 33.1939 32.1726C33.2035 32.1926 33.2079 32.2148 33.2069 32.237C33.2058 32.2592 33.1992 32.2808 33.1878 32.2999C33.1763 32.319 33.1603 32.3349 33.1412 32.3463C32.068 32.9636 30.9518 33.4858 29.78 33.9201C29.762 33.9266 29.7456 33.9369 29.7319 33.9503C29.7182 33.9636 29.7075 33.9798 29.7006 33.9976C29.6936 34.0154 29.6905 34.0346 29.6915 34.0537C29.6925 34.0728 29.6976 34.0915 29.7064 34.1085C30.3525 35.3413 31.0918 36.5149 31.9047 37.6293C31.9216 37.6522 31.9452 37.6693 31.9722 37.6783C31.9991 37.6873 32.0282 37.6877 32.0555 37.6796C35.9215 36.5161 39.563 34.7074 42.8262 32.3301C42.8421 32.319 42.8555 32.3046 42.8654 32.2879C42.8753 32.2711 42.8815 32.2525 42.8836 32.2332C43.7809 23.0919 41.3798 15.1493 36.5149 8.11122C36.5029 8.08835 36.4832 8.07051 36.4592 8.06097ZM14.392 27.4167C12.2708 27.4167 10.5212 25.4984 10.5212 23.1457C10.5212 20.7913 12.2367 18.8748 14.392 18.8748C16.5633 18.8748 18.2969 20.8075 18.2628 23.1457C18.2628 25.5001 16.5472 27.4167 14.392 27.4167ZM28.7033 27.4167C26.5804 27.4167 24.8325 25.4984 24.8325 23.1457C24.8325 20.7913 26.5463 18.8748 28.7033 18.8748C30.8747 18.8748 32.6082 20.8075 32.5741 23.1457C32.5741 25.5001 30.8765 27.4167 28.7033 27.4167Z" fill="white" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_4988_6155">
+                                            <rect width="43.0686" height="43.0686" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--right-->
+            <div class="max-w-447px py-3.5 px-7 flex flex-col gap-3 rounded-lg bg-4F67B2">
+                <div class="flex flex-col gap-1.75">
+                    <div>
+                        <h4 class="text-white font-bold font-circular-std">
+                            Get The Latest
+                        </h4>
+                    </div>
+                    <div class="text-base text-white font-normal font-circular-std">
+                        Sign up for our newsletter for the latest and greatest.
+                    </div>
+                </div>
+                <div class="email-submit w-full">
+                    <form action="#" class="w-full relative">
+                        <input type="email" placeholder="Email" class="w-full py-3.5 pl-2.25 pr-[25%] rounded-lg bg-black text-8087A9 text-base font-circular-std focus:outline-none" />
+                        <button type="submit" class="py-3.5 px-2.25 absolute right-0 text-third-bg text-base font-bold font-circular-std">
+                            Submit
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--footer-->
+    <footer class="footer w-full mx-auto pt-6.5 md:pt-10 px-7.5 md:px-24.5 bg-primary-bg">
+        <div class="footer-content max-w-container mx-auto flex flex-col justify-between wow fadeInDown">
+            <!--top-cotent-->
+            <div class="w-full mx-auto flex flex-wrap justify-between gap-4.5 pb-6.5 md:pb-13.75 sm:gap-10 xl:gap-0">
+                <div class="sm:w-full lg:max-w-max flex flex-col sm:flex-row lg:flex-col sm:items-center lg:items-start sm:justify-center lg:justify-start gap-5 sm:gap-12.5 lg:gap-5">
+                    <div class="text-h5 text-white font-bold font-circular-std leading-[1.3]">
+                        Available On
+                    </div>
+                    <div class="flex flex-col sm:flex-row lg:flex-col gap-2 sm:gap-5 lg:gap-2">
+                        <!--app-store-->
+                        <div>
+                            <a href="#">
+                                <div class="flex justify-center items-center gap-5.5 bg-second-bg px-3 py-2 rounded-sm">
+                                    <div>
+                                        <svg width="20" height="24" viewBox="0 0 20 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M13.6942 3.82458C14.5585 2.79102 14.9922 1.67436 14.9922 0.478405V0.478391C14.9922 0.319769 14.9848 0.159877 14.9673 0C14.3652 0.0314709 13.725 0.215275 13.0482 0.547635C12.3699 0.885028 11.8106 1.30798 11.3708 1.81664C10.49 2.82128 9.99394 4.04998 9.99394 5.1981C9.99394 5.35678 10.004 5.50778 10.0215 5.65126C11.3896 5.7633 12.6512 5.05329 13.6942 3.82458ZM18.2956 20.9475C18.7878 20.2405 19.2126 19.4714 19.5715 18.636C19.7195 18.2817 19.8587 17.9127 19.9905 17.5274C19.3826 17.2706 18.8361 16.9089 18.3469 16.441C17.2672 15.4328 16.7179 14.1631 16.7017 12.6372C16.6842 10.6783 17.5675 9.15125 19.3533 8.061C18.3557 6.63213 16.8556 5.83902 14.8588 5.67665C14.122 5.61362 13.2225 5.77363 12.1568 6.16007C11.0298 6.57678 10.365 6.78579 10.1689 6.78579C9.90648 6.78579 9.30806 6.60704 8.37607 6.25454C7.44144 5.90323 6.68934 5.72448 6.11582 5.72448C5.06765 5.74204 4.09435 6.0166 3.19356 6.55537C2.29277 7.09415 1.57305 7.82807 1.03205 8.75846C0.343674 9.91676 0 11.299 0 12.9016C0 14.3006 0.254899 15.7457 0.763378 17.2381C1.23816 18.6197 1.84421 19.8316 2.58136 20.8767C3.26842 21.8553 3.84194 22.5461 4.30047 22.9491C5.01887 23.6222 5.73859 23.9425 6.46066 23.9115C6.93545 23.8953 7.55643 23.7315 8.32728 23.417C9.09696 23.1041 9.81654 22.9491 10.4875 22.9491C11.1272 22.9491 11.8269 23.1041 12.5882 23.417C13.347 23.7315 13.9989 23.8864 14.5395 23.8864C15.2925 23.8687 15.9956 23.5573 16.6519 22.9491C17.0753 22.5786 17.6246 21.9114 18.2956 20.9475Z" fill="white" />
+                                        </svg>
+                                    </div>
+                                    <div class="flex flex-col gap-1">
+                                        <div class="text-7 md:text-8 text-white font-rubik font-medium leading-[1] uppercase">
+                                            AVAILABLE ON THE
+                                        </div>
+                                        <div class="text-sm md:text-lg text-white font-normal font-rubik leading-[1]">
+                                            App Store
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!--play-store-->
+                        <div>
+                            <a href="#">
+                                <div class="flex justify-center items-center gap-4 bg-second-bg px-3 py-2 rounded-sm">
+                                    <div>
+                                        <svg width="23" height="25" viewBox="0 0 23 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M16.3817 8.20573L12.8356 11.7832L12.8342 11.7817L1.14011 0C1.42142 0.000412562 1.69764 0.0756868 1.9408 0.218206L16.3817 8.20573ZM9.29506e-06 22.9505V22.5856L0 22.5779V1.67725L9.29506e-06 1.66955V1.31212C9.29506e-06 0.746495 0.196619 0.31439 0.51433 0.127765L12.4093 12.1148L12.2692 12.2561V12.2634L11.7147 12.8154L0.504357 24.1234C0.19377 23.9166 0.0042703 23.5161 9.29506e-06 22.9505ZM12.8356 12.4479L1.1045 24.2813C1.39893 24.2862 1.68895 24.2087 1.94223 24.0573L16.4116 16.0483L12.8356 12.4479ZM16.8077 8.44117L21.6132 11.1042H21.6133C22.6276 11.6655 22.6276 12.5943 21.6118 13.1585L16.8347 15.8143L13.1647 12.1162L16.8077 8.44117Z" fill="white" />
+                                        </svg>
+                                    </div>
+                                    <div class="flex flex-col gap-1">
+                                        <div class="text-7 md:text-8 text-white font-rubik font-medium leading-[1] uppercase">
+                                            GET IT ON
+                                        </div>
+                                        <div class="text-sm md:text-lg text-white font-normal font-rubik leading-[1]">
+                                            Google Play
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="sm:w-full lg:max-w-max footer-nav flex flex-wrap sm:justify-center gap-y-5 sm:gap-y-0 gap-13.5 xl:gap-28.5">
+                    <div class="flex gap-7.5">
+                        <ul>
+                            <li><a href="#" class="font-circular-std"> Game Modes </a></li>
+                            <li class="flex">
+                                <a href="#" class="font-circular-std"> Sunday’s Best </a>
+                            </li>
+                            <li><a href="#" class="font-circular-std"> Hot Streak </a></li>
+                            <li><a href="#" class="font-circular-std"> Boost Ball </a></li>
+                            <li><a href="#" class="font-circular-std"> Daily Dozen </a></li>
+                        </ul>
+                        <ul class="mt-8.75">
+                            <li>
+                                <a href="#" class="pb-0 text-base text-white font-normal leading-[1.5] font-circular-std">
+                                    7 Stakes
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-base text-white font-normal leading-[1.5] font-circular-std">
+                                    Big Board
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <ul>
+                            <li><a href="#" class="font-circular-std"> About </a></li>
+                            <li><a href="#" class="font-circular-std"> News </a></li>
+                            <li><a href="#" class="font-circular-std"> Contact </a></li>
+                            <li><a href="#" class="font-circular-std"> Who We Are </a></li>
+                            <li><a href="#" class="font-circular-std"> FAQ </a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <ul>
+                            <li><a href="#" class="font-circular-std"> Legal </a></li>
+                            <li>
+                                <a href="#" class="font-circular-std"> Privacy Policy </a>
+                            </li>
+                            <li>
+                                <a href="#" class="font-circular-std"> Terms & Conditions </a>
+                            </li>
+                            <li>
+                                <a href="#" class="font-circular-std"> Resposible Gaming </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!--btm-cotent-->
+            <div class="w-full py-4.5 md:pt-4 md:pb-5 flex flex-col sm:flex-row justify-between sm:items-center gap-4 sm:gap-0 border-t border-t-4D4D6B">
+                <div>
+                    <img src="./assets/img/logo/logo.webp" alt="" class="max-w-196px sm:max-w-160px lg:max-w-max" />
+                </div>
+                <div class="sm:text-8 lg:text-xs text-white font-normal font-circular-std leading-[1.5]">
+                    © 2022 Champions Round, Inc. All rights reserved. Site by
+                    Reciprocal.co
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="./assets/vendors/jquery/jquery-3.7.1.min.js"></script>
+    <script src="./assets/vendors/WOW-master/dist/wow.min.js"></script>
+    <script type="text/javascript" src="./assets/vendors/slick/slick/slick.min.js"></script>
+    <script src="/assets/js/bundle.js"></script>
+</body>
+
+</html>
