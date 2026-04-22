@@ -20,10 +20,25 @@
       }
     }
   };
+  .nav ul >li:hover{
+    @apply text-third-bg;
+  };
+  .nav ul li:hover svg path {
+  @apply fill-third-bg;
+  };
+  .nav ul li svg {
+  @apply transition-all duration-300;
+  };
+  .nav ul li:hover svg {
+  @apply rotate-180;
+  };
+  .nav ul li{
+    @apply text-white transition-colors duration-300;
+  }
   .drop-down li{
     @apply pb-3;
     a{
-      @apply text-white;
+      @apply text-white transition-colors duration-300;
     }
   };
   .drop-down li:hover{

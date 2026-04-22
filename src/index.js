@@ -57,6 +57,10 @@ jQuery(function($){
         }
     }, 550);
     });
+
+    $('.header-content .logo').on('click', function () {
+         window.location.href = 'index.html';
+    });
    
     //app section tab
     $('.tab-container .tab-items').each(function() {
