@@ -4162,6 +4162,9 @@
       }
     }
   }
+  .logo {
+    cursor: pointer;
+  }
 }
 html {
   scrollbar-gutter: unset;
