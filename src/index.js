@@ -91,31 +91,34 @@ jQuery(function($){
 
     //accordian
         $('.accordian-container .accordian-items').on('click', function(){
-        $(this).find('.toggle-text').slideToggle(300);
-        $(this).find('.absolute').toggleClass('rotate-90');
-        
             if($(window).width() < 1024){
                     $(this).siblings().find('.toggle-text').slideUp(300);
             }else{
-                $(this).siblings().find('.toggle-text').hide();
+                $(this).siblings().find('.toggle-text').hide(300);
             };
          $(this).siblings().find('.absolute').addClass('rotate-90');
+         setTimeout(() => {
+            $(this).find('.toggle-text').slideToggle(300);
+            $(this).find('.absolute').toggleClass('rotate-90');
+         }, 310);
         });
     
 
+        $('.tab-container .tab-items').removeClass('p-1 sm:pt-0').addClass('pt-4 xl:pt-6 pb-4.75 xl:pb-6.75 px-4.75 xl:px-5.75');
+        $('.tab-container').removeClass('gap-10.5 sm:gap-6 md:gap-8 lg:gap-10 xl:gap-14');
 
     
 
     
 
-    let seenOn = $('.seen-on .seen-on-slider');
+let seenOn = $('.seen-on .seen-on-slider');
 
 if (seenOn.length > 0) {
 
     $('.seen-on-slider').slick({
         dots: false,
         infinite: true,
-        speed: 1200, // Fast but smooth
+        speed: 3500, // Fast but smooth
         slidesToShow: 5,
         slidesToScroll: 1,
         arrows: false,
@@ -142,7 +145,7 @@ if (seenOn.length > 0) {
                 settings: {
                     dots: false,
                     infinite: true,
-                    speed: 2000, // Fast but smooth
+                    speed: 1500, // Fast but smooth
                     slidesToShow: 2,
                     slidesToScroll: 1,
                     arrows: false,
@@ -156,7 +159,7 @@ if (seenOn.length > 0) {
                 settings: {
                     dots: false,
                     infinite: true,
-                    speed: 1000, // Fast but smooth
+                    speed: 1500, // Fast but smooth
                     slidesToShow: 1,
                     slidesToScroll: 1,
                     arrows: false,
